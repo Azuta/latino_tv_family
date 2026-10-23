@@ -73,16 +73,33 @@ function parseM3U(text, languageName, languageCode) {
       const rawCat = groupMatch ? groupMatch[1] : '';
       let mappedCategory = mapCategory(rawCat);
 
-      // Detectar categorías comunes en canales japoneses
-      if (languageName === 'Japonés') {
-        const lower = (rawTitle + ' ' + (nameMatch ? nameMatch[1] : '') + ' ' + rawCat).toLowerCase();
+      // Reglas de lenguaje específicas
+      let finalLang = languageName;
+      let finalLangCode = languageCode;
+
+      // Canales de Japón que transmiten en inglés
+      const lower = (rawTitle + ' ' + (nameMatch ? nameMatch[1] : '') + ' ' + url).toLowerCase();
+      if (lower.includes('bloomberg') || lower.includes('euronewsengjp') || lower.includes('fcbarcelona') || lower.includes('fuel_tv') || lower.includes('reuters')) {
+        finalLang = 'English';
+        finalLangCode = 'en';
+      }
+
+      // Canales de Anime latino que transmiten en español
+      if (lower.includes('maxanime') || lower.includes('max anime')) {
+        finalLang = 'Español';
+        finalLangCode = 'es';
+        mappedCategory = 'Infantil y Familia';
+      }
+
+      // Categorización de canales japoneses
+      if (finalLang === 'Japonés') {
         if (lower.includes('news') || lower.includes('ニュース') || lower.includes('weather') || lower.includes('ウェザー')) {
           mappedCategory = 'Noticias';
-        } else if (lower.includes('sport') || lower.includes('スポーツ') || lower.includes('barça')) {
+        } else if (lower.includes('sport') || lower.includes('スポーツ') || lower.includes('golf') || lower.includes('pachinko') || lower.includes('パチンコ')) {
           mappedCategory = 'Deportes';
-        } else if (lower.includes('anime') || lower.includes('アニメ') || lower.includes('mx') || lower.includes('kids')) {
+        } else if (lower.includes('anime') || lower.includes('アニメ') || lower.includes('mx') || lower.includes('kids') || lower.includes('キッズ')) {
           mappedCategory = 'Infantil y Familia';
-        } else if (lower.includes('movie') || lower.includes('cinema') || lower.includes('映画')) {
+        } else if (lower.includes('movie') || lower.includes('cinema') || lower.includes('映画') || lower.includes('時代劇')) {
           mappedCategory = 'Cine y Series';
         } else if (lower.includes('music') || lower.includes('音楽')) {
           mappedCategory = 'Música';
@@ -98,8 +115,8 @@ function parseM3U(text, languageName, languageCode) {
           title: cleanTitle,
           logo: logoMatch ? logoMatch[1] : '',
           category: mappedCategory,
-          language: languageName,
-          languageCode,
+          language: finalLang,
+          languageCode: finalLangCode,
           url
         });
       }
@@ -210,15 +227,26 @@ async function main() {
 
   console.log('Listas descargadas. Procesando canales...');
 
-  const spanishChannels = parseM3U(spaRes, 'Español', 'es');
+  const spanishChannels = [
+    ...parseM3U(spaRes, 'Español', 'es'),
+    {
+      id: 'MAXAnime.ve',
+      name: 'MAX Anime',
+      title: 'MAX Anime TV (Español Latino)',
+      logo: 'https://i.imgur.com/Oj3hEBh.jpg',
+      category: 'Infantil y Familia',
+      language: 'Español',
+      languageCode: 'es',
+      url: 'https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8'
+    }
+  ];
+
   const englishChannels = parseM3U(engRes, 'English', 'en');
   
-  // Procesar canales japoneses de todas las fuentes
   const jpChannels = [
     ...parseM3U(jpCatRes, 'Japonés', 'ja'),
     ...parseM3U(freeJpRes, 'Japonés', 'ja'),
     ...parseM3U(iptvJpRes, 'Japonés', 'ja'),
-    // Canales garantizados de alta velocidad en Japón
     {
       id: 'NHKWorldJapan.jp',
       name: 'NHK World Japan',
@@ -278,16 +306,6 @@ async function main() {
       language: 'Japonés',
       languageCode: 'ja',
       url: 'https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8'
-    },
-    {
-      id: 'MAXAnime.jp',
-      name: 'MAX Anime',
-      title: 'MAX Anime TV',
-      logo: 'https://i.imgur.com/Oj3hEBh.jpg',
-      category: 'Infantil y Familia',
-      language: 'Japonés',
-      languageCode: 'ja',
-      url: 'https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8'
     }
   ];
 
@@ -295,17 +313,13 @@ async function main() {
   const uniqueEnglish = dedupe(englishChannels.filter(c => 
     ['Noticias', 'Deportes', 'Cine y Series', 'Infantil y Familia', 'Cultura y Documentales', 'Música'].includes(c.category)
   ));
-  const uniqueJapanese = dedupe(jpChannels);
+  const uniqueJapanese = dedupe(jpChannels.filter(c => c.language === 'Japonés'));
 
   console.log(`Candidatos únicos:`);
   console.log(`- 🇪🇸 Español: ${uniqueSpanish.length}`);
   console.log(`- 🇬🇧 Inglés: ${uniqueEnglish.length}`);
   console.log(`- 🇯🇵 Japonés: ${uniqueJapanese.length}`);
 
-  // Pool de prueba:
-  // - Top 500 en Español
-  // - Top 250 en Inglés
-  // - Todos los canales en Japonés
   const candidatePool = [
     ...uniqueSpanish.slice(0, 520),
     ...uniqueEnglish.slice(0, 250),
@@ -360,7 +374,6 @@ async function main() {
   console.log(`🇬🇧 English: ${sortedEnglish.length} canales`);
   console.log(`🇯🇵 Japonés: ${sortedJapanese.length} canales`);
 
-  // Generar playlist M3U Plus
   const outLines = [
     '#EXTM3U x-tvg-url="https://iptv-org.github.io/epg/guides/es/movistar.es.epg.xml,https://epg.kanya.io/us/guide.xml.gz"',
     ''
@@ -389,7 +402,7 @@ async function main() {
 
   appendSection('Canales en Español (Latinoamérica y España)', sortedSpanish, 'Español', 'Español');
   appendSection('English & International Channels', sortedEnglish, 'English', 'English');
-  appendSection('Canales en Japonés (日本 / Japan)', sortedJapanese, 'Japonés', 'Japanese');
+  appendSection('Canales en Japonés (日本 - Audio Nativo Japonés)', sortedJapanese, 'Japonés', 'Japanese');
 
   const m3uOutputPath = path.join(process.cwd(), 'public', 'canales.m3u');
   fs.writeFileSync(m3uOutputPath, outLines.join('\n'), 'utf-8');

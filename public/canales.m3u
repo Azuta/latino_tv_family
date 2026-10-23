@@ -257,6 +257,9 @@ https://tv.wracanal10.com:3300/live/chinolatvlive.m3u8
 #EXTINF:-1 tvg-id="Clan.es@SD" tvg-name="Clan" tvg-logo="https://i.ibb.co/vv3FC2Nv/clan.png" group-title="Español: Infantil y Familia" tvg-language="Español",Clan
 https://lge-lgla2.otteravision.com/lge/lgcla/lgcla.m3u8
 
+#EXTINF:-1 tvg-id="MAXAnime.jp" tvg-name="MAX Anime" tvg-logo="https://i.imgur.com/Oj3hEBh.jpg" group-title="Español: Infantil y Familia" tvg-language="Español",MAX Anime TV
+https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8
+
 ### --- Español: Entretenimiento ---
 #EXTINF:-1 tvg-id="OPA.cr@SD" tvg-name="¡OPA!" tvg-logo="https://i.imgur.com/300c1ZH.png" group-title="Español: Entretenimiento" tvg-language="Español",¡OPA!
 https://5f1af61612fb5.streamlock.net/genteopa/videogenteopa_720p/playlist.m3u8
@@ -1252,6 +1255,18 @@ https://cdn3.wowza.com/5/djRwZmQvTEJidmZD/cityftmyers/G2083_002/playlist.m3u8
 #EXTINF:-1 tvg-id="CGTN.cn@SD" tvg-name="CGTN" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/CGTN.svg/960px-CGTN.svg.png" group-title="English: Noticias" tvg-language="English",CGTN
 https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
 
+#EXTINF:-1 tvg-id="rch_90" tvg-name="Euronews" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/euronews.png" group-title="English: News" tvg-language="English",Euronews
+https://cdn-apne1.tsv2.amagi.tv/linear/amg00882-euronewssa-euronewsengjp-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_103" tvg-name="NewsWorld" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/newsworld.png" group-title="English: News" tvg-language="English",NewsWorld
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-newsworld-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_70" tvg-name="Bloomberg TV+" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/bloomberg_tv.png" group-title="English: News" tvg-language="English",Bloomberg TV+
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01601-bloomberg-bloombergplus-hls-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_120" tvg-name="Reuters 60" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/reuters_60.png" group-title="English: News" tvg-language="English",Reuters 60
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00453-reuters-reuters-hls-rakutenjp/playlist.m3u8
+
 ### --- English: Deportes ---
 #EXTINF:-1 tvg-id="30ADarcizzleOffshore.us@SD" tvg-name="30A Darcizzle Offshore" tvg-logo="https://i.imgur.com/Q4l2uao.png" group-title="English: Deportes" tvg-language="English",30A Darcizzle Offshore
 https://30a-tv.com/darcizzle.m3u8
@@ -1294,6 +1309,12 @@ https://jmp2.uk/plu-685029cda1e091e16ff57fc8.m3u8
 
 #EXTINF:-1 tvg-id="CBSSportsHQ.us@SD" tvg-name="CBS Sports HQ" tvg-logo="https://i.imgur.com/q8BENJg.png" group-title="English: Deportes" tvg-language="English",CBS Sports HQ
 https://jmp2.uk/plu-5e9f2c05172a0f0007db4786.m3u8
+
+#EXTINF:-1 tvg-id="rch_89" tvg-name="TOP BARÇA" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/top_barca.png" group-title="English: Sports" tvg-language="English",TOP BARÇA
+https://cdn-apne1.tsv2.amagi.tv/linear/amg17560-fcbarcelona-fcbenglishcmag-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_64" tvg-name="FUEL TV" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fuel_tv.png" group-title="English: Sports" tvg-language="English",FUEL TV
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01074-fueltv-fueltvjpcmaf-rakutenjp/playlist.m3u8
 
 ### --- English: Cine y Series ---
 #EXTINF:-1 tvg-id="00sReplay.us@SD" tvg-name="00s Replay" tvg-logo="https://images.pluto.tv/channels/62ba60f059624e000781c436/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",00s Replay
@@ -1452,24 +1473,6 @@ https://jmp2.uk/plu-65a93b0607e03a000895abda.m3u8
 #EXTINF:-1 tvg-id="CarChase.se@NO" tvg-name="Car Chase (Sweden) NO" tvg-logo="https://images.pluto.tv/channels/65a93b0607e03a000895abda/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Car Chase (Sweden) NO
 https://jmp2.uk/plu-65a93b870c7ff50008d1ca47.m3u8
 
-#EXTINF:-1 tvg-id="AMCEurope.uk@Hungary" tvg-name="like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AMC Europe Hungary" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AMC Europe Hungary
-http://88.212.15.17/live/amc_hun/index.m3u8
-
-#EXTINF:-1 tvg-id="AXNCEE.es@Hungary" tvg-name="like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AXN CEE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AXN CEE
-http://88.212.15.17/live/axn_hun/index.m3u8
-
-#EXTINF:-1 tvg-id="AXNCrime.us@SD" tvg-name="like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Movies",AXN Crime" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/AXN_Crime_-_Logo.png/960px-AXN_Crime_-_Logo.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Movies",AXN Crime
-http://88.212.15.17/live/viasat_film/index.m3u8
-
-#EXTINF:-1 tvg-id="AMCEurope.uk@CzechRepublic" tvg-name="like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AMC Europe Czech Republic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AMC Europe Czech Republic
-http://88.212.15.17/live/test_amc_25p/playlist.m3u8
-
-#EXTINF:-1 tvg-id="AXNAdria.us@SD" tvg-name="like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Adria" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Adria
-http://5.57.74.130:8000/play/a0at/index.m3u8
-
-#EXTINF:-1 tvg-id="AXNBlack.us@CzechRepublic" tvg-name="like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Black (United States) Czech Republic" tvg-logo="https://i.imgur.com/Peo1QiZ.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Black (United States) Czech Republic
-http://88.212.15.17/live/test_black/playlist.m3u8
-
 ### --- English: Infantil y Familia ---
 #EXTINF:-1 tvg-id="90sKids.us@SD" tvg-name="90's Kids" tvg-logo="https://images.pluto.tv/channels/6452c814939a590008567a3b/colorLogoPNG_1731836283044.png" group-title="English: Infantil y Familia" tvg-language="English",90's Kids
 https://jmp2.uk/plu-6452c814939a590008567a3b.m3u8
@@ -1509,6 +1512,25 @@ http://92.114.85.87:8007/play/a008
 
 #EXTINF:-1 tvg-id="CBeebies.pl@SD" tvg-name="CBeebies (Poland)" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/CBeebies.svg/960px-CBeebies.svg.png" group-title="English: Infantil y Familia" tvg-language="English",CBeebies (Poland)
 http://92.114.85.87:8017/play/a004/index.m3u8
+
+### --- English: Entretenimiento ---
+#EXTINF:-1 tvg-id="AMCEurope.uk@Hungary" tvg-name="like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AMC Europe Hungary" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AMC Europe Hungary
+http://88.212.15.17/live/amc_hun/index.m3u8
+
+#EXTINF:-1 tvg-id="AXNCEE.es@Hungary" tvg-name="like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AXN CEE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AXN CEE
+http://88.212.15.17/live/axn_hun/index.m3u8
+
+#EXTINF:-1 tvg-id="AXNCrime.us@SD" tvg-name="like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Movies",AXN Crime" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/AXN_Crime_-_Logo.png/960px-AXN_Crime_-_Logo.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/130.0.0.0 Safari/537.36" group-title="Movies",AXN Crime
+http://88.212.15.17/live/viasat_film/index.m3u8
+
+#EXTINF:-1 tvg-id="AMCEurope.uk@CzechRepublic" tvg-name="like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AMC Europe Czech Republic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AMC Europe Czech Republic
+http://88.212.15.17/live/test_amc_25p/playlist.m3u8
+
+#EXTINF:-1 tvg-id="AXNAdria.us@SD" tvg-name="like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Adria" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Adria
+http://5.57.74.130:8000/play/a0at/index.m3u8
+
+#EXTINF:-1 tvg-id="AXNBlack.us@CzechRepublic" tvg-name="like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Black (United States) Czech Republic" tvg-logo="https://i.imgur.com/Peo1QiZ.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/149.0.0.0 Safari/537.3" group-title="Movies",AXN Black (United States) Czech Republic
+http://88.212.15.17/live/test_black/playlist.m3u8
 
 #EXTINF:-1 tvg-id="CartoonNetworkAsia.sg@SD" tvg-name="like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Animation;Kids",Cartoon Network Asia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="English: Infantil y Familia" tvg-language="English",like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Animation;Kids",Cartoon Network Asia
 https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network.m3u8
@@ -1579,18 +1601,12 @@ https://hls.botflix.tv/radioo/index.m3u8
 https://cmc-cmctv-cineverse.amagi.tv/playlist.m3u8
 
 # ============================================================
-# CANALES EN JAPONÉS (日本 / JAPAN)
+# CANALES EN JAPONÉS (日本 - AUDIO NATIVO JAPONÉS)
 # ============================================================
 
 ### --- Japonés: Noticias ---
-#EXTINF:-1 tvg-id="rch_90" tvg-name="Euronews" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/euronews.png" group-title="Japonés: Noticias" tvg-language="Japanese",Euronews
-https://cdn-apne1.tsv2.amagi.tv/linear/amg00882-euronewssa-euronewsengjp-rakutenjp/playlist.m3u8
-
 #EXTINF:-1 tvg-id="MBSNews.jp" tvg-name="MBS News" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/106_mbs.png" group-title="Japonés: Noticias" tvg-language="Japanese",MBSニュース (Mainichi News Kansai)
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-news5-cmaf-rakutenjp/playlist.m3u8
-
-#EXTINF:-1 tvg-id="rch_103" tvg-name="NewsWorld" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/newsworld.png" group-title="Japonés: Noticias" tvg-language="Japanese",NewsWorld
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-newsworld-rakutenjp/playlist.m3u8
 
 #EXTINF:-1 tvg-id="NipponTVNews.jp" tvg-name="Nippon TV News" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/104_ntvnews.png" group-title="Japonés: Noticias" tvg-language="Japanese",日テレNEWS (Nippon TV News 24)
 https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-news1hlscmaf-rakutenjp/playlist.m3u8
@@ -1607,29 +1623,16 @@ https://rch01e-alive-hls.akamaized.net/38fb45b25cdb05a1/out/v1/4e907bfabc684a1da
 #EXTINF:-1 tvg-id="fastch_v2_entns" tvg-name="エンタメニュース (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_entns.png" group-title="Japonés: Noticias" tvg-language="Japanese",エンタメニュース (FAST)
 https://livetv.fastv.jp/channel_assembly/6960899D64B80F9C740C/master.m3u8
 
-### --- Japonés: Deportes ---
-#EXTINF:-1 tvg-id="rch_89" tvg-name="TOP BARÇA" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/top_barca.png" group-title="Japonés: Deportes" tvg-language="Japanese",TOP BARÇA
-https://cdn-apne1.tsv2.amagi.tv/linear/amg17560-fcbarcelona-fcbenglishcmag-rakutenjp/playlist.m3u8
-
 ### --- Japonés: Infantil y Familia ---
-#EXTINF:-1 tvg-id="MAXAnime.jp" tvg-name="MAX Anime" tvg-logo="https://i.imgur.com/Oj3hEBh.jpg" group-title="Japonés: Infantil y Familia" tvg-language="Japanese",MAX Anime TV
-https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8
-
 #EXTINF:-1 tvg-id="" tvg-name="TOKYO MX チャンネル" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/108_mx.png" group-title="Japonés: Infantil y Familia" tvg-language="Japanese",TOKYO MX チャンネル
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-rakutenjp/playlist.m3u8
 
 ### --- Japonés: Entretenimiento ---
-#EXTINF:-1 tvg-id="rch_70" tvg-name="Bloomberg TV+" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/bloomberg_tv.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Bloomberg TV+
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01601-bloomberg-bloombergplus-hls-rakutenjp/playlist.m3u8
-
 #EXTINF:-1 tvg-id="CGNTVJapan.jp@SD" tvg-name="CGNTV Japan" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",CGNTV Japan
 https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGNWebLiveJP.m3u8
 
 #EXTINF:-1 tvg-id="fastch_v2_snyon" tvg-name="FASHIONPLUS (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fashionplus.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",FASHIONPLUS (FAST)
 https://livetv.fastv.jp/channel_assembly/69609952725E0FA3B987/master.m3u8
-
-#EXTINF:-1 tvg-id="rch_64" tvg-name="FUEL TV" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fuel_tv.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",FUEL TV
-https://cdn-apne1.tsv2.amagi.tv/linear/amg01074-fueltv-fueltvjpcmaf-rakutenjp/playlist.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="Gaki no Tsukai (English Subs)" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Gaki no Tsukai (English Subs)
 https://hamada.gaki-no-tsukai.stream/hls/test.m3u8
@@ -1672,9 +1675,6 @@ https://d1flvb4iqlercm.cloudfront.net/r-channel/live.m3u8
 
 #EXTINF:-1 tvg-id="QVC.jp@SD" tvg-name="QVC" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",QVC
 https://d1flvb4iqlercm.cloudfront.net/live/live_1080p_2nd.m3u8
-
-#EXTINF:-1 tvg-id="rch_120" tvg-name="Reuters 60" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/reuters_60.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Reuters 60
-https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00453-reuters-reuters-hls-rakutenjp/playlist.m3u8
 
 #EXTINF:-1 tvg-id="ShopChannel.jp@SD" tvg-name="Shop Channel" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Shop Channel
 https://stream3.shopch.jp/HLS/master.m3u8
