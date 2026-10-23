@@ -8,6 +8,9 @@
 #EXTINF:-1 tvg-id="24Horas.es@SD" tvg-name="24 Horas (Spain)" tvg-logo="https://i.ibb.co/21sXZ3GT/24h.png" group-title="Español: Noticias" tvg-language="Español",24 Horas (Spain)
 https://ztnr.rtve.es/ztnr/1694255.m3u8
 
+#EXTINF:-1 tvg-id="24HorasCatalunya.es@SD" tvg-name="24 Horas Catalunya" tvg-logo="https://i.ibb.co/21sXZ3GT/24h.png" group-title="Español: Noticias" tvg-language="Español",24 Horas Catalunya
+https://ztnr.rtve.es/ztnr/4952053.m3u8
+
 #EXTINF:-1 tvg-id="247CanaldeNoticias.ar@SD" tvg-name="24/7 Canal de Noticias" tvg-logo="https://i.imgur.com/4hDCB1M.png" group-title="Español: Noticias" tvg-language="Español",24/7 Canal de Noticias
 https://panel.host-live.com:19360/cn247tv/cn247tv.m3u8
 
@@ -37,6 +40,9 @@ https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8
 
 #EXTINF:-1 tvg-id="ANTV.ve@SD" tvg-name="ANTV (Venezuela)" tvg-logo="https://i.imgur.com/Qm88HT0.png" group-title="Español: Noticias" tvg-language="Español",ANTV (Venezuela)
 http://181.78.8.199:8000/play/a0fo/index.m3u8
+
+#EXTINF:-1 tvg-id="AtacamaNoticias.cl@SD" tvg-name="Atacama Noticias" tvg-logo="https://i.imgur.com/Avx4Ecf.png" group-title="Español: Noticias" tvg-language="Español",Atacama Noticias
+https://v2.tustreaming.cl/atacamanoticias/index.m3u8
 
 #EXTINF:-1 tvg-id="ATL26.us@SD" tvg-name="ATL 26" tvg-logo="https://i.imgur.com/s4fqNMt.png" group-title="Español: Noticias" tvg-language="Español",ATL 26
 https://securestream11.champds.com/LIVE/AtlantaGALIVE/AtlantaGALIVE.m3u8
@@ -68,14 +74,20 @@ https://congresodirecto.akamaized.net/hls/live/2037973/canalparlamento/master.m3
 #EXTINF:-1 tvg-id="CanalParlamentodelCongresodeJalisco.mx@SD" tvg-name="Canal Parlamento del Congreso de Jalisco" tvg-logo="https://i.imgur.com/fLpkHfZ.png" group-title="Español: Noticias" tvg-language="Español",Canal Parlamento del Congreso de Jalisco
 https://60417ddeaf0d9.streamlock.net/srtc/smil:srtc.smil/playlist.m3u8
 
-#EXTINF:-1 tvg-id="CanalPyC.co@SD" tvg-name="Canal PyC" tvg-logo="https://i.imgur.com/3qxBDhV.png" group-title="Español: Noticias" tvg-language="Español",Canal PyC
-https://live20.bozztv.com/akamaissh101/ssh101/pyctelevision/playlist.m3u8
+#EXTINF:-1 tvg-id="CanalPro.py@SD" tvg-name="Canal Pro" tvg-logo="https://i.imgur.com/ah8n7jL.png" group-title="Español: Noticias" tvg-language="Español",Canal Pro
+https://www.desde-paraguay.com/pro.m3u8
 
 #EXTINF:-1 tvg-id="CanalSurNoticias.es@SD" tvg-name="Canal Sur Noticias" tvg-logo="https://i.imgur.com/A3JscwS.png" group-title="Español: Noticias" tvg-language="Español",Canal Sur Noticias
 https://cdnlive.codev8.net/rtvalive/smil:channel42.smil/playlist.m3u8
 
+#EXTINF:-1 tvg-id="CanalTDC.ar@SD" tvg-name="Canal TDC" tvg-logo="https://i.imgur.com/nPG38B2.png" group-title="Español: Noticias" tvg-language="Español",Canal TDC
+https://tdcserver.com:19360/tdconlione-2/tdconlione-2.m3u8
+
 #EXTINF:-1 tvg-id="CitricoTV.do@SD" tvg-name="Citrico TV" tvg-logo="https://enhd.ar/wp-content/uploads/2022/01/0e4a83fc-ba5b-4f26-a333-31f8bd544bcb-300x260.jpeg" group-title="Español: Noticias" tvg-language="Español",Citrico TV
 https://edge.essastream.com/citricotv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CityTVChannel341.us@SD" tvg-name="City TV Channel 3/41" tvg-logo="https://i.imgur.com/L0vaDea.png" group-title="Español: Noticias" tvg-language="Español",City TV Channel 3/41
+https://edge-f.swagit.com/live/chinohillsca/live-1-a/playlist.m3u8
 
 ### --- Español: Deportes ---
 #EXTINF:-1 tvg-id="AgriculturaTV.cl@SD" tvg-name="Agricultura TV" tvg-logo="https://i.imgur.com/sxrYc3Q.png" group-title="Español: Deportes" tvg-language="Español",Agricultura TV
@@ -98,6 +110,12 @@ https://livestream.lumpentv.com.ar/hls/lumpen.m3u8
 
 #EXTINF:-1 tvg-id="CDNDeportes.do@SD" tvg-name="CDN Deportes" tvg-logo="https://i.imgur.com/yU5LqTL.png" group-title="Español: Deportes" tvg-language="Español",CDN Deportes
 https://hls.tvabierta.net/hls/036.m3u8
+
+#EXTINF:-1 tvg-id="CiudadMagica.ar@SD" tvg-name="Ciudad Magica" tvg-logo="https://i.imgur.com/HJkSz2U.png" group-title="Español: Deportes" tvg-language="Español",Ciudad Magica
+https://lbgo.bozztv.com/ssh101/ssh101/verycoolfgr/playlist.m3u8
+
+#EXTINF:-1 tvg-id="ClaroSports.mx@SD" tvg-name="Claro Sports" tvg-logo="https://i.imgur.com/n0kd17r.png" group-title="Español: Deportes" tvg-language="Español",Claro Sports
+http://168.196.127.137:6001/play/a08r/index.m3u8
 
 ### --- Español: Cine y Series ---
 #EXTINF:-1 tvg-id="13T.cl@SD" tvg-name="13T" tvg-logo="https://i.imgur.com/csBNi2L.png" group-title="Español: Cine y Series" tvg-language="Español",13T
@@ -148,11 +166,26 @@ https://canal.mediaserver.com.co/live/cinedios.m3u8
 #EXTINF:-1 tvg-id="CINDIETV.br@HD" tvg-name="CINDIE TV" tvg-logo="https://a.jsrdn.com/hls/23208/cindie-tv/logo_20250225_222520_68.png" group-title="Español: Cine y Series" tvg-language="Español",CINDIE TV
 https://cc-hqw8u5r1nshjc.akamaized.net/scheduler/scheduleMaster/352.m3u8
 
+#EXTINF:-1 tvg-id="CineAdrenalina.us@SD" tvg-name="Cine Adrenalina" tvg-logo="https://i.imgur.com/njCKaMv.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Adrenalina
+https://jmp2.uk/plu-5d8d164d92e97a5e107638d2.m3u8
+
+#EXTINF:-1 tvg-id="CineAmor.us@SD" tvg-name="Cine Amor" tvg-logo="https://i.imgur.com/eAS86qH.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Amor
+https://jmp2.uk/plu-5f5136317aedfb0007016f93.m3u8
+
 #EXTINF:-1 tvg-id="CineFriki.es@SD" tvg-name="Cine Friki" tvg-logo="https://i.imgur.com/b3Ospym.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Friki
 https://d2mr4fu91mjx9m.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rb0tx75ojbc5u/CineFriki_ES.m3u8
 
+#EXTINF:-1 tvg-id="CinePremiere.us@SD" tvg-name="Cine Premiere" tvg-logo="https://i.imgur.com/PdhWTO6.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Premiere
+https://jmp2.uk/plu-5cf968040ab7d8f181e6a68b.m3u8
+
 #EXTINF:-1 tvg-id="CineSony.us@SD" tvg-name="Cine Sony" tvg-logo="https://i.imgur.com/bZWoDTg.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Sony
 https://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CineTerror.us@US" tvg-name="Cine Terror" tvg-logo="https://images.pluto.tv/channels/5f12111c9e6c2c00078ef3bb/colorLogoPNG.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Terror
+https://jmp2.uk/plu-5d8d180092e97a5e107638d3.m3u8
+
+#EXTINF:-1 tvg-id="CineTerror.us@LatAm" tvg-name="Cine Terror LatAm" tvg-logo="https://images.pluto.tv/channels/5f12111c9e6c2c00078ef3bb/colorLogoPNG.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Terror LatAm
+https://jmp2.uk/plu-5dcddf1ed95e740009fef7ab.m3u8
 
 #EXTINF:-1 tvg-id="CineWestern.es@SD" tvg-name="Cine Western (Spain)" tvg-logo="https://i.imgur.com/2UROzSc.png" group-title="Español: Cine y Series" tvg-language="Español",Cine Western (Spain)
 https://d2nq34q0i1r3la.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-awohw8g217ho8/CineWestern_ES.m3u8
@@ -172,8 +205,8 @@ https://streaming.onnethn.com/CINEMAX/playlist.m3u8
 #EXTINF:-1 tvg-id="CinemaxLatinAmerica.us@HD" tvg-name="Cinemax Latin America HD" tvg-logo="https://i.imgur.com/cZWoJWD.png" group-title="Español: Cine y Series" tvg-language="Español",Cinemax Latin America HD
 http://38.65.175.84:8000/play/a093/index.m3u8
 
-#EXTINF:-1 tvg-id="AneflixLive.us@HD" tvg-name="like Gecko) Chrome/83.0.4103.97 Safari/537.36" group-title="Movies",Aneflix Live" tvg-logo="https://cdn.pixabay.com/photo/2021/06/26/18/11/live-6366830_960_720.png" group-title="Español: Cine y Series" tvg-language="Español",like Gecko) Chrome/83.0.4103.97 Safari/537.36" group-title="Movies",Aneflix Live
-https://stream-cdn-iad.vaughnsoft.net/play/live_a_neflix01.flv
+#EXTINF:-1 tvg-id="ClaroCinema.mx@SD" tvg-name="Claro Cinema" tvg-logo="https://i.imgur.com/SOLGQxQ.jpg" group-title="Español: Cine y Series" tvg-language="Español",Claro Cinema
+http://158.172.217.18:8000/play/a00d/index.m3u8
 
 ### --- Español: Infantil y Familia ---
 #EXTINF:-1 tvg-id="13Kids.cl@SD" tvg-name="13 Kids" tvg-logo="https://i.imgur.com/8WJUbSD.png" group-title="Español: Infantil y Familia" tvg-language="Español",13 Kids
@@ -193,6 +226,12 @@ http://168.196.127.137:6001/play/a06j/index.m3u8
 
 #EXTINF:-1 tvg-id="BobEsponja.de@ES" tvg-name="Bob Esponja" tvg-logo="https://images.pluto.tv/channels/5f1aca0b4e448e00075e7c5e/colorLogoPNG.png" group-title="Español: Infantil y Familia" tvg-language="Español",Bob Esponja
 https://jmp2.uk/plu-5f1aca0b4e448e00075e7c5e.m3u8
+
+#EXTINF:-1 tvg-id="BobEsponjaPantalonesCuadrados.us@LatAm" tvg-name="Bob Esponja Pantalones Cuadrados" tvg-logo="https://images.pluto.tv/channels/6254598f5083f800076d8563/colorLogoPNG_1781042617821.png" group-title="Español: Infantil y Familia" tvg-language="Español",Bob Esponja Pantalones Cuadrados
+https://jmp2.uk/plu-6254598f5083f800076d8563.m3u8
+
+#EXTINF:-1 tvg-id="Boing.es@SD" tvg-name="Boing (Spain)" tvg-logo="https://i.imgur.com/nUYuCAP.png" group-title="Español: Infantil y Familia" tvg-language="Español",Boing (Spain)
+http://digisat.ddns.net:4022/udp/239.0.5.177:8208
 
 #EXTINF:-1 tvg-id="Boomerang.us@SD" tvg-name="Boomerang" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/960px-Boomerang_2014_logo.svg.png" group-title="Español: Infantil y Familia" tvg-language="Español",Boomerang
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
@@ -214,6 +253,9 @@ http://45.70.201.81:8000/play/a00p/index.m3u8
 
 #EXTINF:-1 tvg-id="ChinolaTV.do@SD" tvg-name="Chinola TV" tvg-logo="https://i.imgur.com/ybud4dI.png" group-title="Español: Infantil y Familia" tvg-language="Español",Chinola TV
 https://tv.wracanal10.com:3300/live/chinolatvlive.m3u8
+
+#EXTINF:-1 tvg-id="Clan.es@SD" tvg-name="Clan" tvg-logo="https://i.ibb.co/vv3FC2Nv/clan.png" group-title="Español: Infantil y Familia" tvg-language="Español",Clan
+https://lge-lgla2.otteravision.com/lge/lgcla/lgcla.m3u8
 
 ### --- Español: Entretenimiento ---
 #EXTINF:-1 tvg-id="OPA.cr@SD" tvg-name="¡OPA!" tvg-logo="https://i.imgur.com/300c1ZH.png" group-title="Español: Entretenimiento" tvg-language="Español",¡OPA!
@@ -314,6 +356,9 @@ https://video.hostingcaaguazu.com:19360/altmedia/altmedia.m3u8
 
 #EXTINF:-1 tvg-id="AltantoTV.do@SD" tvg-name="Altanto TV" tvg-logo="https://i.imgur.com/KWvVLhc.png" group-title="Español: Entretenimiento" tvg-language="Español",Altanto TV
 https://stream.haislin.com/ls_j3BOKxBbUJ/index.m3u8
+
+#EXTINF:-1 tvg-id="AlternativaTV.cl@SD" tvg-name="Alternativa TV" tvg-logo="https://i.imgur.com/KCrSbgv.png" group-title="Español: Entretenimiento" tvg-language="Español",Alternativa TV
+https://live20.bozztv.com/giatv/giatv-alternativatv/alternativatv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="AMCanal.cl@SD" tvg-name="AM Canal" tvg-logo="https://i.imgur.com/wfi9NXL.png" group-title="Español: Entretenimiento" tvg-language="Español",AM Canal
 https://streaming.bitsur.cl:3534/live/vdo1102live.m3u8
@@ -429,8 +474,17 @@ https://live1.ovalcast.com:3916/live/bcngospeltvlive.m3u8
 #EXTINF:-1 tvg-id="BellaAbanquinaTV.pe@SD" tvg-name="Bella Abanquina TV" tvg-logo="https://i.imgur.com/bORM4rt.png" group-title="Español: Entretenimiento" tvg-language="Español",Bella Abanquina TV
 https://live-evg8.tv360.bitel.com.pe/bitel/bellaabanquinaSRT/playlist.m3u8
 
+#EXTINF:-1 tvg-id="Bellavision.do@SD" tvg-name="Bellavision" tvg-logo="https://i.imgur.com/XqQ3kCs.png" group-title="Español: Entretenimiento" tvg-language="Español",Bellavision
+https://fox.hostlagarto.com:8081/bellavision8hd/tracks-v1a1/mono.m3u8
+
 #EXTINF:-1 tvg-id="BestClasicosTV.cr@SD" tvg-name="BestClasicosTV" tvg-logo="https://i.imgur.com/a/BRb8AVL.png" group-title="Español: Entretenimiento" tvg-language="Español",BestClasicosTV
 https://acceso.mediosdecostarica.com:3873/hybrid/play.m3u8
+
+#EXTINF:-1 tvg-id="BioBioTV.cl@SD" tvg-name="Bio Bio TV" tvg-logo="https://i.imgur.com/lhglEUP.png" group-title="Español: Entretenimiento" tvg-language="Español",Bio Bio TV
+https://redirector.rudo.video/hls-video/339f69c6122f6d8f4574732c235f09b7683e31a5/bbtv/bbtv.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="bitMe.mx@SD" tvg-name="bitMe" tvg-logo="https://i.imgur.com/79hrcx8.png" group-title="Español: Entretenimiento" tvg-language="Español",bitMe
+https://cablered.iptvperu.tv:1936/cablered/bitme-srt_new/playlist.m3u8
 
 #EXTINF:-1 tvg-id="bitMeLatinAmerica.mx@SD" tvg-name="bitMe Latin America" tvg-logo="https://i.imgur.com/JgXQz6c.png" group-title="Español: Entretenimiento" tvg-language="Español",bitMe Latin America
 https://cablered.iptvperu.tv:1936/cablered/bitme_new/playlist.m3u8
@@ -459,6 +513,9 @@ https://rds3.desdeparaguay.net/brunomasitv/brunomasitv/playlist.m3u8
 #EXTINF:-1 tvg-id="BUMTelevision.co@SD" tvg-name="BUM Television" tvg-logo="https://i.imgur.com/I0eGYI0.png" group-title="Español: Entretenimiento" tvg-language="Español",BUM Television
 https://movil.ejeserver.com/live/visiondorada.m3u8
 
+#EXTINF:-1 tvg-id="BVC.ar@SD" tvg-name="BVC" tvg-logo="https://i.imgur.com/I06TSx0.png" group-title="Español: Entretenimiento" tvg-language="Español",BVC
+https://vivo.solumedia.com:19360/bvnet/bvnet.m3u8
+
 #EXTINF:-1 tvg-id="CableImagenArmstrong.ar@SD" tvg-name="Cable Imagen Armstrong" tvg-logo="https://i.imgur.com/U9NuJQC.png" group-title="Español: Entretenimiento" tvg-language="Español",Cable Imagen Armstrong
 https://stream.arcast.com.ar/casse/casse/playlist.m3u8
 
@@ -474,11 +531,17 @@ https://live-evg10.tv360.bitel.com.pe/bitel/cadenatv/playlist.m3u8
 #EXTINF:-1 tvg-id="Cadena103TV.ar@SD" tvg-name="Cadena103.TV" tvg-logo="https://i.imgur.com/vBsry35.png" group-title="Español: Entretenimiento" tvg-language="Español",Cadena103.TV
 https://streamlov.alsolnet.com/cadena103/live/playlist.m3u8
 
+#EXTINF:-1 tvg-id="CalderaVision.cl@SD" tvg-name="Caldera Vision" tvg-logo="https://i.imgur.com/A3Jiffe.png" group-title="Español: Entretenimiento" tvg-language="Español",Caldera Vision
+https://tv.arkeo.cl:1936/kymczwbrge/kymczwbrge/playlist.m3u8
+
 #EXTINF:-1 tvg-id="CaliforniaMediosTV.mx@SD" tvg-name="California Medios TV" tvg-logo="https://i.imgur.com/IDvpRNI.png" group-title="Español: Entretenimiento" tvg-language="Español",California Medios TV
 https://s5.mexside.net:1936/medios/medios/playlist.m3u8
 
 #EXTINF:-1 tvg-id="CampoAbiertoTV.cl@SD" tvg-name="Campo Abierto TV" tvg-logo="https://i.imgur.com/KL6pgaL.png" group-title="Español: Entretenimiento" tvg-language="Español",Campo Abierto TV
 https://v2.tustreaming.cl/catvlive/index.m3u8
+
+#EXTINF:-1 tvg-id="CampusTV.cl@SD" tvg-name="CampusTV" tvg-logo="https://i.imgur.com/LvzLg33.png" group-title="Español: Entretenimiento" tvg-language="Español",CampusTV
+https://pantera1-100gb-cl-movistar.dps.live/campustv/campustv.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="CamuTV.do@SD" tvg-name="Camu TV" tvg-logo="https://i.imgur.com/3d8cLm9.jpg" group-title="Español: Entretenimiento" tvg-language="Español",Camu TV
 https://live20.bozztv.com/akamaissh101/ssh101/camutv/playlist.m3u8
@@ -527,6 +590,9 @@ http://arcast.net:1935/mp/mp/playlist.m3u8
 
 #EXTINF:-1 tvg-id="Canal2AlpavisionNeiva.co@SD" tvg-name="Canal 2 Alpavision Neiva" tvg-logo="https://i.imgur.com/Yv8XIGW.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 2 Alpavision Neiva
 https://stmv1.voxtvhd.com.br/alpavision/alpavision/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal2deUshuaia.ar@SD" tvg-name="Canal 2 de Ushuaia" tvg-logo="https://i.ibb.co/q5NPdK2/canal2-logo.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 2 de Ushuaia
+https://nd106.republicaservers.com:4433/hls/c6611/index.m3u8
 
 #EXTINF:-1 tvg-id="Canal2Gualeguay.ar@SD" tvg-name="Canal 2 Gualeguay" tvg-logo="https://i.imgur.com/TOlncyp.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 2 Gualeguay
 https://stream.arcast.net:4443/gualeguay/gualeguay/playlist.m3u8
@@ -582,6 +648,9 @@ https://5f2c1b0d880e5.streamlock.net/canal33tijuana/videocanal33tijuana/playlist
 #EXTINF:-1 tvg-id="Canal4Esquel.ar@SD" tvg-name="Canal 4 Esquel" tvg-logo="https://i.imgur.com/6kbOr16.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 4 Esquel
 https://stream.arcast.com.ar/canal4esquel/canal4esquel/playlist.m3u8
 
+#EXTINF:-1 tvg-id="Canal4Jujuy.ar@SD" tvg-name="Canal 4 Jujuy" tvg-logo="https://i.imgur.com/qB6I274.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 4 Jujuy
+https://5cd577a3dd8ec.streamlock.net/CANAL4/smil:CANAL4.smil/playlist.m3u8
+
 #EXTINF:-1 tvg-id="Canal4ManchaCentro.es@SD" tvg-name="Canal 4 Mancha Centro" tvg-logo="https://i.imgur.com/t3O3O9M.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 4 Mancha Centro
 https://5924d3ad0efcf.streamlock.net/canal4/canal4live/playlist.m3u8
 
@@ -609,6 +678,9 @@ http://45.5.118.152:8000/play/a03i/index.m3u8
 #EXTINF:-1 tvg-id="Canal5DelPueblo.ar@SD" tvg-name="Canal 5 Del Pueblo" tvg-logo="https://i.ibb.co/XzcYYMc/Canal-5-alcorta-ver.jpg" group-title="Español: Entretenimiento" tvg-language="Español",Canal 5 Del Pueblo
 https://stmv4.voxtvhd.com.br/canal5pueblo/canal5pueblo/playlist.m3u8
 
+#EXTINF:-1 tvg-id="Canal5PuertoMontt.cl@SD" tvg-name="Canal 5 Puerto Montt" tvg-logo="https://i.imgur.com/pLobTRW.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 5 Puerto Montt
+https://5ff3d9babae13.streamlock.net/aufymdjpjf/aufymdjpjf/playlist.m3u8
+
 #EXTINF:-1 tvg-id="Canal5SantaFe.ar@SD" tvg-name="Canal 5 Santa Fe" tvg-logo="https://i.imgur.com/WX0esjQ.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 5 Santa Fe
 https://stream.arcast.com.ar/c5sf/c5sf/playlist.m3u8
 
@@ -621,14 +693,23 @@ https://video0.rogohosting.com:19360/tvcozumel/tvcozumel.m3u8
 #EXTINF:-1 tvg-id="Canal5TVMax.py@SD" tvg-name="Canal 5 TV Max" tvg-logo="https://i.imgur.com/6oihaDM.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 5 TV Max
 https://tvmaxsa.com.py/hls/FB-430927919930380-0-AbzjnbAzAIR0NaFg.m3u8
 
+#EXTINF:-1 tvg-id="Canal50Morteros.ar@SD" tvg-name="Canal 50 Morteros" tvg-logo="https://i.imgur.com/IDhgBav.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 50 Morteros
+https://online.coopmorteros.coop/canal50/vivo.m3u8
+
 #EXTINF:-1 tvg-id="Canal56.es@SD" tvg-name="Canal 56" tvg-logo="https://i.imgur.com/pwRVbCz.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 56
 https://videos.canal56.com/directe/stream/index.m3u8
 
 #EXTINF:-1 tvg-id="Canal56QuieroTV.bo@SD" tvg-name="Canal 56 Quiero TV" tvg-logo="https://i.imgur.com/l9kDNld.jpeg" group-title="Español: Entretenimiento" tvg-language="Español",Canal 56 Quiero TV
 http://45.5.118.152:8000/play/a08z/index.m3u8
 
+#EXTINF:-1 tvg-id="Canal6Posadas.ar@SD" tvg-name="Canal 6 Posadas" tvg-logo="https://i.imgur.com/OamBiS5.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 6 Posadas
+https://iptv.ixfo.com.ar:30443/live/c6digital/playlist.m3u8
+
 #EXTINF:-1 tvg-id="Canal7Jujuy.ar@SD" tvg-name="Canal 7 Jujuy" tvg-logo="https://i.imgur.com/K0jk8p4.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 7 Jujuy
 https://stream.arcast.live/canal7jujuy/ngrp:canal7jujuy_all/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Canal7Salta.ar@SD" tvg-name="Canal 7 Salta" tvg-logo="https://i.imgur.com/CudG6sl.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 7 Salta
+https://vivo.solumedia.com:19360/cooperativa/cooperativa.m3u8
 
 #EXTINF:-1 tvg-id="Canal7TalangaVision.hn@SD" tvg-name="Canal 7 Talanga Vision" tvg-logo="https://i.ibb.co/0cqcyz4/Logo-2020-azul-El-lider-de-la-zona.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 7 Talanga Vision
 https://amixtv.com:8081/talangavision/index.m3u8
@@ -659,6 +740,9 @@ https://streamconex.com:19360/villamaza/villamaza.m3u8
 
 #EXTINF:-1 tvg-id="Canal8.cr@SD" tvg-name="Canal 8" tvg-logo="https://i.imgur.com/nefPi2Y.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 8
 https://mdstrm.com/live-stream-playlist/5a7b1e63a8da282c34d65445.m3u8
+
+#EXTINF:-1 tvg-id="Canal8CCProducciones.py@SD" tvg-name="Canal 8 C&C Producciones" tvg-logo="https://i.imgur.com/SVj5fjg.jpg" group-title="Español: Entretenimiento" tvg-language="Español",Canal 8 C&C Producciones
+https://video.hostingcaaguazu.com:19360/canal8cvs/canal8cvs.m3u8
 
 #EXTINF:-1 tvg-id="Canal8Catacaos.pe@SD" tvg-name="Canal 8 Catacaos" tvg-logo="https://i.imgur.com/O5MrFjY.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal 8 Catacaos
 https://live.obslivestream.com/canal8/index.m3u8
@@ -698,6 +782,9 @@ http://138.121.15.230:9002/CANAL-CAPITAL/index.m3u8
 
 #EXTINF:-1 tvg-id="CanalCatorce.do@SD" tvg-name="Canal Catorce" tvg-logo="https://i.imgur.com/iKLGBbA.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal Catorce
 https://stream.haislin.com/14tv/index.m3u8
+
+#EXTINF:-1 tvg-id="CanalCHD.co@SD" tvg-name="Canal CHD" tvg-logo="https://i.imgur.com/cNv1MPs.jpeg" group-title="Español: Entretenimiento" tvg-language="Español",Canal CHD
+https://vs20.live.opencaster.com/canalchd2025_8d99626c/index.m3u8
 
 #EXTINF:-1 tvg-id="CanalChilote.cl@SD" tvg-name="Canal Chilote" tvg-logo="https://i.imgur.com/mdYIKyt.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal Chilote
 https://videostream.chileservidores.com:8081/chiloe2/index.m3u8
@@ -750,9 +837,6 @@ https://movil.ejeserver.com/live/nets.m3u8
 #EXTINF:-1 tvg-id="CanalOnce.mx@HD" tvg-name="Canal Once" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2b/Canal_Once_logo_2025.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal Once
 https://vivo.canaloncelive.tv/securepkgr3/oncemexico/playlist.m3u8
 
-#EXTINF:-1 tvg-id="CanalPulpoTV.ar@SD" tvg-name="Canal Pulpo TV" tvg-logo="https://new.opencaster.com/uploads/logos/logo_306_1756336707.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal Pulpo TV
-https://vs20.live.opencaster.com/canalpulpotv_bdeee6e2/index.m3u8
-
 #EXTINF:-1 tvg-id="CanalRCN.co@SD" tvg-name="Canal RCN" tvg-logo="https://i.imgur.com/5PhTaHp.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal RCN
 http://138.121.15.230:9002/RCN/index.m3u8
 
@@ -774,8 +858,17 @@ https://s1.tvdatta.com:3384/live/canal20tvlive.m3u8
 #EXTINF:-1 tvg-id="CanalTRV.sv@SD" tvg-name="Canal TRV" tvg-logo="https://i.imgur.com/g5QKQ2E.png" group-title="Español: Entretenimiento" tvg-language="Español",Canal TRV
 https://stream.ontvmx.com/ontv/CNMLXR0Z6FPtGdjcI4/playlist.m3u8
 
+#EXTINF:-1 tvg-id="CanalTV3.co@SD" tvg-name="Canal TV3" tvg-logo="https://i.imgur.com/pyeBDpg.jpeg" group-title="Español: Entretenimiento" tvg-language="Español",Canal TV3
+https://streaming.telenetdigital.net.co:8086/canal3tv/stream.m3u8
+
 #EXTINF:-1 tvg-id="CanalWomtv.co@SD" tvg-name="Canal Womtv" tvg-logo="https://i.imgur.com/Nr4muMP.jpeg" group-title="Español: Entretenimiento" tvg-language="Español",Canal Womtv
 https://live.amelbatv.co:81/womtvlive/index.m3u8
+
+#EXTINF:-1 tvg-id="Canalda26HD.do@HD" tvg-name="Canalda 26 HD" tvg-logo="https://canaldahd.com/wp-content/uploads/2023/03/cropped-canaldahdlogo-1.png" group-title="Español: Entretenimiento" tvg-language="Español",Canalda 26 HD
+https://canalda.rgradio.net:3084/live/canaldalive.m3u8
+
+#EXTINF:-1 tvg-id="CanangaTV.do@SD" tvg-name="Cananga TV" tvg-logo="https://i.imgur.com/isXlMAh.png" group-title="Español: Entretenimiento" tvg-language="Español",Cananga TV
+https://cdn.streamingcpanel.com:3545/live/canangatlive.m3u8
 
 #EXTINF:-1 tvg-id="CanelaTV.us@SD" tvg-name="Canela TV" tvg-logo="https://i.imgur.com/8Hllkpk.png" group-title="Español: Entretenimiento" tvg-language="Español",Canela TV
 https://d3cx6yargdnl7q.cloudfront.net/canelatv.m3u8
@@ -795,6 +888,9 @@ http://167.249.23.102:8000/play/a0ax/index.m3u8
 #EXTINF:-1 tvg-id="CaracolTV.co@SD" tvg-name="Caracol TV" tvg-logo="https://i.imgur.com/WbfdJbk.png" group-title="Español: Entretenimiento" tvg-language="Español",Caracol TV
 http://138.121.15.230:9002/CARACOL/index.m3u8
 
+#EXTINF:-1 tvg-id="CaracolaTV.cl@SD" tvg-name="Caracola TV" tvg-logo="https://i.imgur.com/QGvfqug.png" group-title="Español: Entretenimiento" tvg-language="Español",Caracola TV
+https://wifispeed.trapemn.tv:1936/comunales/caracola-tv/chunks.m3u8
+
 #EXTINF:-1 tvg-id="CascaraTV.do@SD" tvg-name="Cascara TV" tvg-logo="https://i.imgur.com/DEUR7mB.png" group-title="Español: Entretenimiento" tvg-language="Español",Cascara TV
 https://ss2.tvrdomi.com:1936/cascaratv/cascaratv/playlist.m3u8
 
@@ -803,6 +899,9 @@ https://live-evg7.tv360.bitel.com.pe/bitel/casmatvSRT-TRA/playlist.m3u8
 
 #EXTINF:-1 tvg-id="CatatumboTV.ve@SD" tvg-name="Catatumbo TV" tvg-logo="https://i.imgur.com/LBI2la0.png" group-title="Español: Entretenimiento" tvg-language="Español",Catatumbo TV
 https://cloud.fastchannel.es/manifiest/hls/prog9/catatumbotv.m3u8
+
+#EXTINF:-1 tvg-id="CAtv.pr@SD" tvg-name="CAtv" tvg-logo="https://caribbeanadvantage.com/images/CAtv-logo-512.png" group-title="Español: Entretenimiento" tvg-language="Español",CAtv
+https://video2.getstreamhosting.com:19360/8216/8216.m3u8
 
 #EXTINF:-1 tvg-id="CBTVMichoacan.mx@SD" tvg-name="CB TV Michoacan" tvg-logo="https://i.imgur.com/oFeCIeD.png" group-title="Español: Entretenimiento" tvg-language="Español",CB TV Michoacan
 https://5ca3e84a76d30.streamlock.net/cbtv/videoc3b3t3v3/playlist.m3u8
@@ -839,6 +938,42 @@ https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2223
 
 #EXTINF:-1 tvg-id="CinevisionCanal19.do@SD" tvg-name="Cinevision Canal 19" tvg-logo="https://i.imgur.com/mJN2XNm.png" group-title="Español: Entretenimiento" tvg-language="Español",Cinevision Canal 19
 https://5790d294af2dc.streamlock.net/tvhdlive/tvhdlive/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CitytvBogota.co@SD" tvg-name="Citytv Bogota" tvg-logo="https://i.imgur.com/h7K9EW9.png" group-title="Español: Entretenimiento" tvg-language="Español",Citytv Bogota
+http://138.121.15.230:9002/CITY-TV/index.m3u8
+
+#EXTINF:-1 tvg-id="CiudadTVResistencia.ar@SD" tvg-name="Ciudad TV Resistencia" tvg-logo="https://i.imgur.com/oL8SMTL.png" group-title="Español: Entretenimiento" tvg-language="Español",Ciudad TV Resistencia
+https://617c5175c970b.streamlock.net:4444/chacodxdtv/livenew/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CiudadesdelOcioTV.es@SD" tvg-name="Ciudades del Ocio TV" tvg-logo="https://i.imgur.com/CTQgqsM.png" group-title="Español: Entretenimiento" tvg-language="Español",Ciudades del Ocio TV
+https://cloudvideo.servers10.com:8081/8024/index.m3u8
+
+#EXTINF:-1 tvg-id="ClaroTelevisionDominicana.do@SD" tvg-name="Claro Television Dominicana" tvg-logo="https://i.imgur.com/fJD7OxB.png" group-title="Español: Entretenimiento" tvg-language="Español",Claro Television Dominicana
+https://streamunoapp.com:3960/live/claroteledomlive.m3u8
+
+#EXTINF:-1 tvg-id="ClaroVisionTV.do@SD" tvg-name="Claro Vision TV" tvg-logo="https://i.imgur.com/MpTgJMJ.png" group-title="Español: Entretenimiento" tvg-language="Español",Claro Vision TV
+https://streamunoapp.com:3057/live/clarovisiontvlive.m3u8
+
+#EXTINF:-1 tvg-id="ClubTV.cl@SD" tvg-name="Club TV" tvg-logo="https://i.imgur.com/6fmQLF8.png" group-title="Español: Entretenimiento" tvg-language="Español",Club TV
+https://tv.arkeo.cl:1936/clubtv/clubtv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CMMTV.es@HD" tvg-name="CMM TV HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/CMMedia.svg/960px-CMMedia.svg.png" group-title="Español: Entretenimiento" tvg-language="Español",CMM TV HD
+https://cdnapisec.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_gnz6ity9/protocol/https/format/applehttp/flavorIds/1_a9gxgxzy,1_v71ryg4b,1_vbfvtjw6,1_obo1bqsx,1_3shk3s5d/a.m3u8
+
+#EXTINF:-1 tvg-id="CNCBugavision.co@SD" tvg-name="CNC Bugavision" tvg-logo="https://i.imgur.com/zJAwnvd.png" group-title="Español: Entretenimiento" tvg-language="Español",CNC Bugavision
+https://movil.ejeserver.com/live/cncbuga.m3u8
+
+#EXTINF:-1 tvg-id="CNCMedellin.co@HD" tvg-name="CNC Medellin" tvg-logo="https://i.imgur.com/J1f4fNq.png" group-title="Español: Entretenimiento" tvg-language="Español",CNC Medellin
+http://138.94.3.106:8000/play/a02o/index.m3u8
+
+#EXTINF:-1 tvg-id="CNCPereira.co@SD" tvg-name="CNC Pereira" tvg-logo="https://i.imgur.com/5vJ0aXH.png" group-title="Español: Entretenimiento" tvg-language="Español",CNC Pereira
+https://cloudvideo.servers10.com:8081/latinchaneltv/index.m3u8
+
+#EXTINF:-1 tvg-id="CNCSantanderdeQuilichao.co@SD" tvg-name="CNC Santander de Quilichao" tvg-logo="https://i.imgur.com/LNl2o9q.jpg" group-title="Español: Entretenimiento" tvg-language="Español",CNC Santander de Quilichao
+https://movil.ejeserver.com/live/cncsantander.m3u8
+
+#EXTINF:-1 tvg-id="AmericaTV.ar@SD" tvg-name="como Gecko) Chrome/112.0.0.0 Mobile Safari/537.36" group-title="General",America TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Am%C3%A9rica_TV_%28Nuevo_logo_Junio_2020%29.png/500px-Am%C3%A9rica_TV_%28Nuevo_logo_Junio_2020%29.png" group-title="Español: Entretenimiento" tvg-language="Español",como Gecko) Chrome/112.0.0.0 Mobile Safari/537.36" group-title="General",America TV
+https://prepublish.f.qaotic.net/a07/americahls-100056/playlist_720p.m3u8
 
 ### --- Español: Cultura y Documentales ---
 #EXTINF:-1 tvg-id="13C.cl@SD" tvg-name="13C" tvg-logo="https://i.imgur.com/Zfe2f5j.png" group-title="Español: Cultura y Documentales" tvg-language="Español",13C
@@ -879,6 +1014,9 @@ https://stream.arcast.com.ar/canal7catamarca/ngrp:canal7catamarca_all/playlist.m
 
 #EXTINF:-1 tvg-id="ChiloeRed25.cl@SD" tvg-name="Chiloe Red 25" tvg-logo="https://i.imgur.com/3tqrImm.png" group-title="Español: Cultura y Documentales" tvg-language="Español",Chiloe Red 25
 https://v2.tustreaming.cl/chiloered/index.m3u8
+
+#EXTINF:-1 tvg-id="CiracuTV.ec@SD" tvg-name="Ciracu TV" tvg-logo="https://i.imgur.com/mkf2TJ6.png" group-title="Español: Cultura y Documentales" tvg-language="Español",Ciracu TV
+https://cloud37.ecuatel.com/ciracutv/live/manifest.m3u8
 
 ### --- Español: Música ---
 #EXTINF:-1 tvg-id="13Festival.cl@SD" tvg-name="13 Festival" tvg-logo="https://i.imgur.com/Ymk6j5o.png" group-title="Español: Música" tvg-language="Español",13 Festival
@@ -926,11 +1064,32 @@ https://live20.bozztv.com/giatv/giatv-KMKTV/KMKTV/chunks.m3u8
 #EXTINF:-1 tvg-id="ChamameTV.ar@SD" tvg-name="Chamame TV" tvg-logo="https://i.imgur.com/JigzJck.png" group-title="Español: Música" tvg-language="Español",Chamame TV
 https://srv4.zcast.com.br/chamametv/chamametv/playlist.m3u8
 
+#EXTINF:-1 tvg-id="ChocolateFM.cl@SD" tvg-name="Chocolate FM" tvg-logo="https://cdn.m3u.cl/logo/382_ChocolateFM.png" group-title="Español: Música" tvg-language="Español",Chocolate FM
+https://5eaccbab48461.streamlock.net:1936/8180/8180/playlist.m3u8
+
+#EXTINF:-1 tvg-id="ClaroMusicaTV.co@SD" tvg-name="Claro Musica TV" tvg-logo="https://i.imgur.com/vrSFUwv.png" group-title="Español: Música" tvg-language="Español",Claro Musica TV
+http://45.171.64.30:6060/play/a010
+
 # ============================================================
-# INTERNATIONAL & ENGLISH CHANNELS
+# ENGLISH & INTERNATIONAL CHANNELS
 # ============================================================
 
 ### --- English: Noticias ---
+#EXTINF:-1 tvg-id="2GB.au@SD" tvg-name="2GB" tvg-logo="https://i.ibb.co/jwM8DFG/2GB-1.png" group-title="English: Noticias" tvg-language="English",2GB
+https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8
+
+#EXTINF:-1 tvg-id="30AInvestmentPitch.us@SD" tvg-name="30A Investment Pitch" tvg-logo="https://i.imgur.com/CKCtZo7.png" group-title="English: Noticias" tvg-language="English",30A Investment Pitch
+https://30a-tv.com/feeds/xodglobal/30atv.m3u8
+
+#EXTINF:-1 tvg-id="30ALionelNation.us@SD" tvg-name="30A Lionel Nation" tvg-logo="https://m.media-amazon.com/images/I/71dgsQwVcNL.png" group-title="English: Noticias" tvg-language="English",30A Lionel Nation
+https://30a-tv.com/ln.m3u8
+
+#EXTINF:-1 tvg-id="3AW.au@SD" tvg-name="3AW" tvg-logo="https://i.imgur.com/Z4MdB0S.png" group-title="English: Noticias" tvg-language="English",3AW
+https://3awlive.akamaized.net/hls/live/2032295/3AW/index.m3u8
+
+#EXTINF:-1 tvg-id="6PR.au@SD" tvg-name="6PR" tvg-logo="https://i.imgur.com/Q9iCxg1.png" group-title="English: Noticias" tvg-language="English",6PR
+https://6prlive.akamaized.net/hls/live/2033806/6PR/index.m3u8
+
 #EXTINF:-1 tvg-id="AbanteTV.ph@HD" tvg-name="Abante TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d9/Abante_masthead.svg" group-title="English: Noticias" tvg-language="English",Abante TV
 https://amg19223-amg19223c12-amgplt0352.playout.now3.amagi.tv/playlist/amg19223-amg19223c12-amgplt0352/playlist.m3u8
 
@@ -991,25 +1150,115 @@ https://cdn-euronews.akamaized.net/live/eds/africanews-en/25049/index.m3u8
 #EXTINF:-1 tvg-id="AlArabiyaEnglish.sa@SD" tvg-name="Al Arabiya English" tvg-logo="https://shahid.mbc.net/mediaObject/7cfc0baf-1201-477f-b722-d3099fafe17f?height=230&width=512&croppingPoint=&version=1&type=png" group-title="English: Noticias" tvg-language="English",Al Arabiya English
 https://live.alarabiya.net/alarabiapublish/english/playlist_dvr.m3u8
 
+#EXTINF:-1 tvg-id="AlJazeera.qa@English" tvg-name="Al Jazeera English" tvg-logo="https://i.imgur.com/7bRVpnu.png" group-title="English: Noticias" tvg-language="English",Al Jazeera English
+https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8
+
 #EXTINF:-1 tvg-id="AlJazeera.qa@EnglishHD" tvg-name="Al Jazeera English HD" tvg-logo="https://i.imgur.com/7bRVpnu.png" group-title="English: Noticias" tvg-language="English",Al Jazeera English HD
 http://stream.mcquack.net/131/index.m3u8
 
 #EXTINF:-1 tvg-id="AL24News.dz@SD" tvg-name="AL24 News" tvg-logo="https://i.imgur.com/vyVEXYL.png" group-title="English: Noticias" tvg-language="English",AL24 News
 https://cdn.live.easybroadcast.io/abr_corp/66_al24_u4yga6h/corp/66_al24_u4yga6h_240p/chunks.m3u8
 
-#EXTINF:-1 tvg-id="BATVGovernmentChannel.us@SD" tvg-name="BATV Government Channel" tvg-logo="https://i.imgur.com/4MdSstx.png" group-title="English: Noticias" tvg-language="English",BATV Government Channel
-https://livestream.telvue.com/billerica3/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8
-
-#EXTINF:-1 tvg-id="BATVGovernmentTV.us@SD" tvg-name="BATV Government TV" tvg-logo="https://i.imgur.com/VPGIfVh.png" group-title="English: Noticias" tvg-language="English",BATV Government TV
-https://reflect-batv.cablecast.tv/live-3/live/live.m3u8
-
-#EXTINF:-1 tvg-id="BBCNews.uk@Africa" tvg-name="BBC News Africa" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png" group-title="English: Noticias" tvg-language="English",BBC News Africa
-https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="AmericasVoiceNews.us@SD" tvg-name="America's Voice News" tvg-logo="https://i.imgur.com/C4w0eYC.png" group-title="English: Noticias" tvg-language="English",America's Voice News
+https://jmp2.uk/plu-5e1f7da4bc7d740009831259.m3u8
 
 #EXTINF:-1 tvg-id="BBCNews.uk@NorthAmerica" tvg-name="BBC News North America" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_BBC_NEWS/images/LOGO_HD/image.png" group-title="English: Noticias" tvg-language="English",BBC News North America
 http://23.237.104.106:8080/USA_BBC_NEWS/index.m3u8
 
+#EXTINF:-1 tvg-id="BEKNews.us@SD" tvg-name="BEK News" tvg-logo="https://i.imgur.com/m80uxdz.png" group-title="English: Noticias" tvg-language="English",BEK News
+https://cdn3.wowza.com/5/ZWQ1K2NYTmpFbGsr/BEK-WOWZA-1/smil:BEKPRIMEeast.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Belarus24.by@SD" tvg-name="Belarus-24" tvg-logo="https://i.imgur.com/BP7tY6F.png" group-title="English: Noticias" tvg-language="English",Belarus-24
+http://ott-7.sevstar.net/belarus24/index.m3u8
+
+#EXTINF:-1 tvg-id="BlackNewsChannel.us@SD" tvg-name="Black News Channel" tvg-logo="https://i.imgur.com/oX5oR4d.png" group-title="English: Noticias" tvg-language="English",Black News Channel
+https://blacknewschannel-xumo-us.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BlazeLive.us@SD" tvg-name="Blaze Live" tvg-logo="https://i.imgur.com/GwxneSQ.png" group-title="English: Noticias" tvg-language="English",Blaze Live
+https://jmp2.uk/plu-5e46fba0c43b0d00096e5ac1.m3u8
+
+#EXTINF:-1 tvg-id="BloombergOriginals.us@SD" tvg-name="Bloomberg Originals SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Bloomberg_Originals.png" group-title="English: Noticias" tvg-language="English",Bloomberg Originals SD
+https://86fdc85a.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnT3JpZ2luYWxzX0hMUw/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BloombergTV.us@US" tvg-name="Bloomberg TV" tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="English: Noticias" tvg-language="English",Bloomberg TV
+http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
+
+#EXTINF:-1 tvg-id="BloombergTV.us@Plus" tvg-name="Bloomberg TV +" tvg-logo="https://i.imgur.com/OuogLHx.png" group-title="English: Noticias" tvg-language="English",Bloomberg TV +
+https://d8975dc3.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9CbG9vbWJlcmdUVlBsdXNfSExT/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BPTV.us@SD" tvg-name="BPTV" tvg-logo="https://i.imgur.com/ObNBL7L.png" group-title="English: Noticias" tvg-language="English",BPTV
+https://buenapark.cablecast.tv/live/stream-1/live.m3u8
+
+#EXTINF:-1 tvg-id="BrevardGovernmentAccessTV.us@SD" tvg-name="Brevard Government Access TV" tvg-logo="https://i.imgur.com/eUTDIQ2.png" group-title="English: Noticias" tvg-language="English",Brevard Government Access TV
+https://cdn3.wowza.com/5/cXdyRHF0Z3kxN0k2/brevardfl/G2111_002/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BTTV.in@SD" tvg-name="BT TV" tvg-logo="https://akm-img-a-in.tosshub.com/businesstoday/resource/img/best-bank-new.png" group-title="English: Noticias" tvg-language="English",BT TV
+https://feeds.intoday.in/bttv/itgd.m3u8
+
+#EXTINF:-1 tvg-id="BusinessRockstars.us@SD" tvg-name="Business Rockstars" tvg-logo="https://i.imgur.com/vfAMWLJ.png" group-title="English: Noticias" tvg-language="English",Business Rockstars
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2220
+
+#EXTINF:-1 tvg-id="CapitalCityConnectionMontgomery.us@SD" tvg-name="Capital City Connection Montgomery" tvg-logo="https://image.roku.com/developer_channels/prod/a2cb55884ff88035ebbbb32ef9c60a228314d0a2ac4c86722aff5ea1cb9abcd8.png" group-title="English: Noticias" tvg-language="English",Capital City Connection Montgomery
+https://capitalcityconnection.cablecast.tv/live/stream-1/live.m3u8
+
+#EXTINF:-1 tvg-id="CBCNewsNetwork.ca@SD" tvg-name="CBC News Network" tvg-logo="https://i.imgur.com/SjTdhvJ.png" group-title="English: Noticias" tvg-language="English",CBC News Network
+https://d2ny9lo79ujali.cloudfront.net/CBC_News_International.m3u8
+
+#EXTINF:-1 tvg-id="CBSNews247.us@SD" tvg-name="CBS News 24/7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/CBS_News_247_logo.svg/960px-CBS_News_247_logo.svg.png" group-title="English: Noticias" tvg-language="English",CBS News 24/7
+https://jmp2.uk/plu-6350fdd266e9ea0007bedec5.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsBaltimore.us@SD" tvg-name="CBS News Baltimore" tvg-logo="https://i.imgur.com/jy3UfCe.png" group-title="English: Noticias" tvg-language="English",CBS News Baltimore
+https://lineup.cbsivideo.com/playout/8877a7d5-b094-4ac8-bc72-75a5fed68e5b/index.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsBayArea.us@SD" tvg-name="CBS News Bay Area" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/1a/Logo-cbsn-bayarea-1920x1080.jpg/revision/latest/scale-to-width-down/512" group-title="English: Noticias" tvg-language="English",CBS News Bay Area
+https://cbsn-sf.cbsnstream.cbsnews.com/out/v1/dac63c1abb3f4a2dac9f508f44bb072a/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsBoston.us@SD" tvg-name="CBS News Boston" tvg-logo="https://i.imgur.com/9un7R3N.png" group-title="English: Noticias" tvg-language="English",CBS News Boston
+https://cbsn-bos.cbsnstream.cbsnews.com/out/v1/589d66ec6eb8434c96c28de0370d1326/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsChicago.us@SD" tvg-name="CBS News Chicago" tvg-logo="https://i.imgur.com/qGbVQir.png" group-title="English: Noticias" tvg-language="English",CBS News Chicago
+https://cbsn-chi.cbsnstream.cbsnews.com/out/v1/b2fc0d5715d54908adf07f97d2616646/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsColorado.us@SD" tvg-name="CBS News Colorado" tvg-logo="https://i.imgur.com/2oyYwBw.png" group-title="English: Noticias" tvg-language="English",CBS News Colorado
+https://cbsn-den.cbsnstream.cbsnews.com/out/v1/2e49baf2906244ecb01b07d9885fbe7a/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsDetroit.us@SD" tvg-name="CBS News Detroit" tvg-logo="https://i.imgur.com/cMels2Y.png" group-title="English: Noticias" tvg-language="English",CBS News Detroit
+https://cbsn-det.cbsnstream.cbsnews.com/out/v1/169f5c001bc74fa7a179b19c20fea069/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsLosAngeles.us@SD" tvg-name="CBS News Los Angeles" tvg-logo="https://i.imgur.com/klULxMV.png" group-title="English: Noticias" tvg-language="English",CBS News Los Angeles
+https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsMiami.us@SD" tvg-name="CBS News Miami" tvg-logo="https://i.imgur.com/DExbVa9.png" group-title="English: Noticias" tvg-language="English",CBS News Miami
+https://cbsn-mia.cbsnstream.cbsnews.com/out/v1/ac174b7938264d24ae27e56f6584bca0/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsMinnesota.us@SD" tvg-name="CBS News Minnesota" tvg-logo="https://i.imgur.com/ubxwfMY.png" group-title="English: Noticias" tvg-language="English",CBS News Minnesota
+https://cbsn-min.cbsnstream.cbsnews.com/out/v1/76518f06941246ba810c8d175600bf74/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsNewYork.us@SD" tvg-name="CBS News New York" tvg-logo="https://i.imgur.com/bpc4v0u.png" group-title="English: Noticias" tvg-language="English",CBS News New York
+https://cbsn-ny.cbsnstream.cbsnews.com/out/v1/ec3897d58a9b45129a77d67aa247d136/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsPhilly.us@SD" tvg-name="CBS News Philly" tvg-logo="https://i.imgur.com/FmtTbNY.png" group-title="English: Noticias" tvg-language="English",CBS News Philly
+https://cbsn-phi.cbsnstream.cbsnews.com/out/v1/5c9ad3e215984b0e9ad845b335216b72/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsPittsburgh.us@SD" tvg-name="CBS News Pittsburgh" tvg-logo="https://i.imgur.com/Un9IrUh.png" group-title="English: Noticias" tvg-language="English",CBS News Pittsburgh
+https://cbsn-pit.cbsnstream.cbsnews.com/out/v1/6966dabf8150405ab26f854e3cd6a2b8/master.m3u8
+
+#EXTINF:-1 tvg-id="CBSNewsSacramento.us@SD" tvg-name="CBS News Sacramento" tvg-logo="https://i.imgur.com/0e1kSGX.png" group-title="English: Noticias" tvg-language="English",CBS News Sacramento
+https://lineup.cbsivideo.com/playout/c1ed69db-6b71-4581-a937-a70ab4089f8a/index.m3u8
+
+#EXTINF:-1 tvg-id="CFMTVChannel98.us@SD" tvg-name="CFM TV Channel 98" tvg-logo="https://i.imgur.com/LGs524I.png" group-title="English: Noticias" tvg-language="English",CFM TV Channel 98
+https://cdn3.wowza.com/5/djRwZmQvTEJidmZD/cityftmyers/G2083_002/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CGTN.cn@SD" tvg-name="CGTN" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/CGTN.svg/960px-CGTN.svg.png" group-title="English: Noticias" tvg-language="English",CGTN
+https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
+
 ### --- English: Deportes ---
+#EXTINF:-1 tvg-id="30ADarcizzleOffshore.us@SD" tvg-name="30A Darcizzle Offshore" tvg-logo="https://i.imgur.com/Q4l2uao.png" group-title="English: Deportes" tvg-language="English",30A Darcizzle Offshore
+https://30a-tv.com/darcizzle.m3u8
+
+#EXTINF:-1 tvg-id="30AGolfKingdom.us@SD" tvg-name="30A Golf Kingdom" tvg-logo="https://i.imgur.com/Lv53nh4.png" group-title="English: Deportes" tvg-language="English",30A Golf Kingdom
+https://30a-tv.com/feeds/vidaa/golf.m3u8
+
 #EXTINF:-1 tvg-id="30AWeLoveCars.us@SD" tvg-name="30A We Love Cars" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxroqfE_hvEApKMQx03sSYXPeEh4ClaF5QSa8XfRwJW_So3vfSN0CjqzxN30H-qEBswqU&usqp=CAU" group-title="English: Deportes" tvg-language="English",30A We Love Cars
 https://30a-tv.com/feeds/vidaa/cars.m3u8
 
@@ -1028,10 +1277,28 @@ https://install.akctvcontrol.com/speed/broadcast/139/desktop-playlist.m3u8
 #EXTINF:-1 tvg-id="AKCTVPuppies.us@SD" tvg-name="AKC TV Puppies" tvg-logo="https://i.imgur.com/2nzRS60.png" group-title="English: Deportes" tvg-language="English",AKC TV Puppies
 https://install.akctvcontrol.com/speed/broadcast/140/desktop-playlist.m3u8
 
+#EXTINF:-1 tvg-id="AmericanNinjaWarrior.us@SD" tvg-name="American Ninja Warrior" tvg-logo="https://raw.githubusercontent.com/RoqueDJ/iptv-svg/main/1792421696158.png" group-title="English: Deportes" tvg-language="English",American Ninja Warrior
+https://d4whmvwm0rdvi.cloudfront.net/10007/99951318/hls/master.m3u8?ads.xumo_channelId=99951318&ads.asnw=169843&ads.afid=405342864&ads.sfid=19647852&ads.csid=xumo_web_NBCUAmericanNinjaWarrior_ssai_cro&ads._fw_is_lat=0&ads._fw_us_privacy=&ads._fw_coppa=0&ads._fw_did=a5090924-15b1-4b7f-b6cd-2f06e2ba51e1&ads._fw_vcid2=512116:a5090924-15b1-4b7f-b6cd-2f06e2ba51e1&ads._fw_app_bundle=web.xumo.com&ads._fw_app_store_url=&ads._fw_content_category=&ads._fw_content_genre=&ads._fw_content_language=en&ads._fw_content_rating=&ads._fw_deviceMake=GitHubAction&ads._fw_device_model=PythonScript&ads._fw_deviceType=3-Connected_TV&ads.appVersion=1.0.0&ads.appName=XumoPlay&ads.xumo_contentId=4063&ads.xumo_contentName=NBCUAmericanNinjaWarrior&ads.xumo_providerId=4063&ads.xumo_providerName=NBCUAmericanNinjaWarrior&ads.channelId=99951318
+
 #EXTINF:-1 tvg-id="beINSPORTSXTRA.us@SD" tvg-name="beIN SPORTS XTRA" tvg-logo="https://i.ibb.co/HT49GPmB/XTRA-2.png" group-title="English: Deportes" tvg-language="English",beIN SPORTS XTRA
 https://bein-xtra-bein.amagi.tv/playlist.m3u8
 
+#EXTINF:-1 tvg-id="BEKSports.us@West" tvg-name="BEK Sports West" tvg-logo="https://i.imgur.com/1l3t5jd.png" group-title="English: Deportes" tvg-language="English",BEK Sports West
+https://cdn3.wowza.com/5/ZWQ1K2NYTmpFbGsr/BEK-WOWZA-1/smil:BEKPRIMEW.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BellatorMMA.us@SD" tvg-name="Bellator MMA" tvg-logo="https://i.imgur.com/VBKoLHk.png" group-title="English: Deportes" tvg-language="English",Bellator MMA
+https://jmp2.uk/plu-5ebc8688f3697d00072f7cf8.m3u8
+
+#EXTINF:-1 tvg-id="BrondbyTV.se@DK" tvg-name="Brondby TV" tvg-logo="https://images.pluto.tv/channels/685029cda1e091e16ff57fc8/colorLogoPNG_1750246109707.png" group-title="English: Deportes" tvg-language="English",Brondby TV
+https://jmp2.uk/plu-685029cda1e091e16ff57fc8.m3u8
+
+#EXTINF:-1 tvg-id="CBSSportsHQ.us@SD" tvg-name="CBS Sports HQ" tvg-logo="https://i.imgur.com/q8BENJg.png" group-title="English: Deportes" tvg-language="English",CBS Sports HQ
+https://jmp2.uk/plu-5e9f2c05172a0f0007db4786.m3u8
+
 ### --- English: Cine y Series ---
+#EXTINF:-1 tvg-id="00sReplay.us@SD" tvg-name="00s Replay" tvg-logo="https://images.pluto.tv/channels/62ba60f059624e000781c436/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",00s Replay
+https://jmp2.uk/plu-62ba60f059624e000781c436.m3u8
+
 #EXTINF:-1 tvg-id="24HourFreeMovies.us@SD" tvg-name="24 Hour Free Movies" tvg-logo="https://i.imgur.com/iSVnzR1.png" group-title="English: Cine y Series" tvg-language="English",24 Hour Free Movies
 https://d1j2u714xk898n.cloudfront.net/scheduler/scheduleMaster/145.m3u8
 
@@ -1041,14 +1308,29 @@ https://jmp2.uk/plu-6720bc6cdaad7f000872a6e2.m3u8
 #EXTINF:-1 tvg-id="30ATVClassicMovies.us@SD" tvg-name="30A TV Classic Movies" tvg-logo="" group-title="English: Cine y Series" tvg-language="English",30A TV Classic Movies
 https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8
 
+#EXTINF:-1 tvg-id="48Hours.us@US" tvg-name="48 Hours" tvg-logo="https://images.pluto.tv/channels/6176f39e709f160007ec61c3/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",48 Hours
+https://dai.google.com/linear/hls/event/JUr94WL2QAiVpGNHY5n5dA/master.m3u8
+
 #EXTINF:-1 tvg-id="48Hours.us@CA" tvg-name="48 Hours CA" tvg-logo="https://images.pluto.tv/channels/6176f39e709f160007ec61c3/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",48 Hours CA
 https://jmp2.uk/plu-62e925bc68d18a00077bb990.m3u8
+
+#EXTINF:-1 tvg-id="5Cops.us@UK" tvg-name="5 Cops" tvg-logo="https://i.imgur.com/QFPRaXK.png" group-title="English: Cine y Series" tvg-language="English",5 Cops
+https://jmp2.uk/plu-5d2c571faeb3e2738ae27933.m3u8
 
 #EXTINF:-1 tvg-id="50CentAction.us@SD" tvg-name="50 Cent Action" tvg-logo="https://provider-static.plex.tv/epg/cms/production/bcfb9977-809f-49ae-acc7-430f2c6ffb26/50CentAction_Logo_1500x1000_DarkBG_-_Chris_Connors.png" group-title="English: Cine y Series" tvg-language="English",50 Cent Action
 https://jmp2.uk/plu-68487fb3f212bedacf5a53e3.m3u8
 
 #EXTINF:-1 tvg-id="70sCinema.us@SD" tvg-name="70s Cinema" tvg-logo="https://i.imgur.com/mgXeEE4.png" group-title="English: Cine y Series" tvg-language="English",70s Cinema
 https://jmp2.uk/plu-5f4d878d3d19b30007d2e782.m3u8
+
+#EXTINF:-1 tvg-id="7thHeaven.se@SE" tvg-name="7th Heaven" tvg-logo="https://images.pluto.tv/channels/6728c9c85534bb0008b320a4/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",7th Heaven
+https://jmp2.uk/plu-6728cab6e482950008b76d8c.m3u8
+
+#EXTINF:-1 tvg-id="7thHeaven.se@DK" tvg-name="7th Heaven DK" tvg-logo="https://images.pluto.tv/channels/6728c9c85534bb0008b320a4/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",7th Heaven DK
+https://jmp2.uk/plu-6728c9c85534bb0008b320a4.m3u8
+
+#EXTINF:-1 tvg-id="7thHeaven.se@NO" tvg-name="7th Heaven NO" tvg-logo="https://images.pluto.tv/channels/6728c9c85534bb0008b320a4/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",7th Heaven NO
+https://jmp2.uk/plu-6728ca75529ac9000830ab14.m3u8
 
 #EXTINF:-1 tvg-id="80sRewind.us@SD" tvg-name="80s Rewind" tvg-logo="https://i.imgur.com/nkEeYfI.png" group-title="English: Cine y Series" tvg-language="English",80s Rewind
 https://jmp2.uk/plu-5ca525b650be2571e3943c63.m3u8
@@ -1065,11 +1347,23 @@ https://jmp2.uk/plu-5e82530945600e0007ca076c.m3u8
 #EXTINF:-1 tvg-id="AllWeddingsWEtv.us@SD" tvg-name="All Weddings WE tv" tvg-logo="https://i.imgur.com/OjLCew5.png" group-title="English: Cine y Series" tvg-language="English",All Weddings WE tv
 https://amc-allweddings-1-us.xumo.wurl.tv/playlist.m3u8
 
+#EXTINF:-1 tvg-id="AlloCine.cm@SD" tvg-name="Allo Cine" tvg-logo="https://raw.githubusercontent.com/songwenhui239/Songwenhui239/refs/heads/main/Allo%20Cine.jpeg" group-title="English: Cine y Series" tvg-language="English",Allo Cine
+https://d1yl6bf4hrzbr0.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5km3zs4zs9sp0/allo.m3u8
+
+#EXTINF:-1 tvg-id="AlwaysFunnyVideos.us@SD" tvg-name="Always Funny Videos" tvg-logo="https://i.imgur.com/vfdN5Xl.png" group-title="English: Cine y Series" tvg-language="English",Always Funny Videos
+https://d24l3uppudokci.cloudfront.net/playlist.m3u8
+
 #EXTINF:-1 tvg-id="AMC.us@EastHD" tvg-name="AMC (United States)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="English: Cine y Series" tvg-language="English",AMC (United States)
 http://23.239.31.26:8989/amc/index.m3u8
 
-#EXTINF:-1 tvg-id="AmericanHorrors.us@SD" tvg-name="American Horrors" tvg-logo="https://image.roku.com/developer_channels/prod/16f5571a82819e8992a748c70b256cbe63105f4b546b73d129668dc2cb701d91.png" group-title="English: Cine y Series" tvg-language="English",American Horrors
-http://107.167.7.162:8081/playlist/amhor/playlist.m3u8
+#EXTINF:-1 tvg-id="Andromeda.us@UK" tvg-name="Andromeda UK" tvg-logo="https://i.imgur.com/6ot2lmd.png" group-title="English: Cine y Series" tvg-language="English",Andromeda UK
+https://jmp2.uk/plu-5e8db96bccae160007c71eec.m3u8
+
+#EXTINF:-1 tvg-id="AnthonyBourdainPartsUnknown.us@UK" tvg-name="Anthony Bourdain: Parts Unknown" tvg-logo="https://i.imgur.com/dAO9llk.png" group-title="English: Cine y Series" tvg-language="English",Anthony Bourdain: Parts Unknown
+https://jmp2.uk/plu-69173ce8abd4703b27f71d44.m3u8
+
+#EXTINF:-1 tvg-id="AuctionHunters.se@SE" tvg-name="Auction Hunters (Sweden)" tvg-logo="https://images.pluto.tv/channels/62da73c4ec46c000070f4cb1/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Auction Hunters (Sweden)
+https://jmp2.uk/plu-62da7380478a5b0007e610d9.m3u8
 
 #EXTINF:-1 tvg-id="AuctionHunters.se@DK" tvg-name="Auction Hunters (Sweden) DK" tvg-logo="https://images.pluto.tv/channels/62da73c4ec46c000070f4cb1/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Auction Hunters (Sweden) DK
 https://jmp2.uk/plu-62da73c4ec46c000070f4cb1.m3u8
@@ -1083,6 +1377,9 @@ http://141.94.193.53:80/axn_black/index.m3u8
 #EXTINF:-1 tvg-id="BarRescue.us@SD" tvg-name="Bar Rescue" tvg-logo="https://images.pluto.tv/channels/655f2ee6c0fc88000877d26c/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Bar Rescue
 https://jmp2.uk/plu-60a3d889a5b3690008dc7fe8.m3u8
 
+#EXTINF:-1 tvg-id="BarRescue.us@CA" tvg-name="Bar Rescue CA" tvg-logo="https://images.pluto.tv/channels/655f2ee6c0fc88000877d26c/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Bar Rescue CA
+https://jmp2.uk/plu-655f2ee6c0fc88000877d26c.m3u8
+
 #EXTINF:-1 tvg-id="BattlestarGalactica.us@SD" tvg-name="Battlestar Galactica" tvg-logo="https://images.pluto.tv/channels/69d7ebff029c431826bd328e/colorLogoPNG_1776982986391.png" group-title="English: Cine y Series" tvg-language="English",Battlestar Galactica
 https://jmp2.uk/plu-69d7ebff029c431826bd328e.m3u8
 
@@ -1092,8 +1389,68 @@ https://jmp2.uk/plu-672e16f5daad7f0008929a0d.m3u8
 #EXTINF:-1 tvg-id="Becker.se@DK" tvg-name="Becker (Sweden) DK" tvg-logo="https://images.pluto.tv/channels/672e157d7d5da5000812872d/colorLogoPNG-1731073515797.png" group-title="English: Cine y Series" tvg-language="English",Becker (Sweden) DK
 https://jmp2.uk/plu-672e157d7d5da5000812872d.m3u8
 
-#EXTINF:-1 tvg-id="Becker.se@NO" tvg-name="Becker (Sweden) NO" tvg-logo="https://images.pluto.tv/channels/672e157d7d5da5000812872d/colorLogoPNG-1731073515797.png" group-title="English: Cine y Series" tvg-language="English",Becker (Sweden) NO
-https://jmp2.uk/plu-672e1634e482950008c759a5.m3u8
+#EXTINF:-1 tvg-id="BET.se@SE" tvg-name="BET" tvg-logo="https://images.pluto.tv/channels/61c1939b8929e40007ff6382/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",BET
+https://jmp2.uk/plu-61c187ef1efe1b0007571711.m3u8
+
+#EXTINF:-1 tvg-id="BETCinema.us@SD" tvg-name="BET Cinema" tvg-logo="https://images.pluto.tv/channels/58af4c093a41ca9d4ecabe96/colorLogoPNG_1759338280891.png" group-title="English: Cine y Series" tvg-language="English",BET Cinema
+https://jmp2.uk/plu-58af4c093a41ca9d4ecabe96.m3u8
+
+#EXTINF:-1 tvg-id="BETComedyMovies.us@SD" tvg-name="BET Comedy Movies" tvg-logo="https://images.pluto.tv/channels/68c32d88f56983aba40052bd/colorLogoPNG_1759246622596.png" group-title="English: Cine y Series" tvg-language="English",BET Comedy Movies
+https://jmp2.uk/plu-68c32d88f56983aba40052bd.m3u8
+
+#EXTINF:-1 tvg-id="BETVisionaries.us@SD" tvg-name="BET Visionaries" tvg-logo="https://images.pluto.tv/channels/663946c1b18d700008d9c168/colorLogoPNG_1759338795452.png" group-title="English: Cine y Series" tvg-language="English",BET Visionaries
+https://jmp2.uk/plu-663946c1b18d700008d9c168.m3u8
+
+#EXTINF:-1 tvg-id="BeverlyHills90210.us@SD" tvg-name="Beverly Hills 90210" tvg-logo="https://images.pluto.tv/channels/5f4d83e0a382c00007bc02e7/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Beverly Hills 90210
+https://jmp2.uk/plu-5f4d83e0a382c00007bc02e7.m3u8
+
+#EXTINF:-1 tvg-id="BlackInkCrew.us@SD" tvg-name="Black Ink Crew" tvg-logo="https://i.imgur.com/QnuIVB6.png" group-title="English: Cine y Series" tvg-language="English",Black Ink Crew
+https://jmp2.uk/plu-5d51e2bceca5b4b2c0e06c50.m3u8
+
+#EXTINF:-1 tvg-id="BlueBloods.us@SD" tvg-name="Blue Bloods" tvg-logo="https://images.pluto.tv/channels/61b3b8c645b45d0007a9bb8d/colorLogoSVG.svg" group-title="English: Cine y Series" tvg-language="English",Blue Bloods
+https://jmp2.uk/plu-61b3b8c645b45d0007a9bb8d.m3u8
+
+#EXTINF:-1 tvg-id="Bonanza.us@SD" tvg-name="Bonanza" tvg-logo="https://images.pluto.tv/channels/696e647b07ea70192d49f6a5/colorLogoPNG_1768842647658.png" group-title="English: Cine y Series" tvg-language="English",Bonanza
+https://jmp2.uk/plu-68e9913c4a666b9054849832.m3u8
+
+#EXTINF:-1 tvg-id="Bonanza.us@CA" tvg-name="Bonanza CA" tvg-logo="https://images.pluto.tv/channels/696e647b07ea70192d49f6a5/colorLogoPNG_1768842647658.png" group-title="English: Cine y Series" tvg-language="English",Bonanza CA
+https://jmp2.uk/plu-696e647b07ea70192d49f6a5.m3u8
+
+#EXTINF:-1 tvg-id="BondiRescue.se@SE" tvg-name="Bondi Rescue (Sweden)" tvg-logo="https://images.pluto.tv/channels/660d66be7bcd8600087cfee5/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Bondi Rescue (Sweden)
+https://jmp2.uk/plu-660d67eec8311c0008b8c3f7.m3u8
+
+#EXTINF:-1 tvg-id="BondiRescue.se@DK" tvg-name="Bondi Rescue (Sweden) DK" tvg-logo="https://images.pluto.tv/channels/660d66be7bcd8600087cfee5/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Bondi Rescue (Sweden) DK
+https://jmp2.uk/plu-660d66be7bcd8600087cfee5.m3u8
+
+#EXTINF:-1 tvg-id="BritainsNextTopModel.se@SE" tvg-name="Britain's Next Top Model" tvg-logo="https://images.pluto.tv/channels/67a09ddc21af380008088dc3/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Britain's Next Top Model
+https://jmp2.uk/plu-67a09e5921af38000808900a.m3u8
+
+#EXTINF:-1 tvg-id="BritainsNextTopModel.se@DK" tvg-name="Britain's Next Top Model DK" tvg-logo="https://images.pluto.tv/channels/67a09ddc21af380008088dc3/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Britain's Next Top Model DK
+https://jmp2.uk/plu-67a09ddc21af380008088dc3.m3u8
+
+#EXTINF:-1 tvg-id="BritainsNextTopModel.se@NO" tvg-name="Britain's Next Top Model NO" tvg-logo="https://images.pluto.tv/channels/67a09ddc21af380008088dc3/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Britain's Next Top Model NO
+https://jmp2.uk/plu-67a09e25c070cf00083c40fa.m3u8
+
+#EXTINF:-1 tvg-id="Bull.se@SE" tvg-name="Bull" tvg-logo="https://images.pluto.tv/channels/6964b982ca459f9b939da8e6/colorLogoPNG_1770900947317.png" group-title="English: Cine y Series" tvg-language="English",Bull
+https://jmp2.uk/plu-6964b9e19bf57be1537fc7d7.m3u8
+
+#EXTINF:-1 tvg-id="Bull.se@DK" tvg-name="Bull DK" tvg-logo="https://images.pluto.tv/channels/6964b982ca459f9b939da8e6/colorLogoPNG_1770900947317.png" group-title="English: Cine y Series" tvg-language="English",Bull DK
+https://jmp2.uk/plu-6964b982ca459f9b939da8e6.m3u8
+
+#EXTINF:-1 tvg-id="Bull.se@NO" tvg-name="Bull NO" tvg-logo="https://images.pluto.tv/channels/6964b982ca459f9b939da8e6/colorLogoPNG_1770900947317.png" group-title="English: Cine y Series" tvg-language="English",Bull NO
+https://jmp2.uk/plu-6964b9b97d2afdec4f9390f6.m3u8
+
+#EXTINF:-1 tvg-id="CagneyLacey.de@GB" tvg-name="Cagney & Lacey" tvg-logo="https://images.pluto.tv/channels/6960c5a906d76f50db2816dc/colorLogoPNG_1767949823270.png" group-title="English: Cine y Series" tvg-language="English",Cagney & Lacey
+https://jmp2.uk/plu-6960c5a906d76f50db2816dc.m3u8
+
+#EXTINF:-1 tvg-id="CarChase.se@SE" tvg-name="Car Chase (Sweden)" tvg-logo="https://images.pluto.tv/channels/65a93b0607e03a000895abda/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Car Chase (Sweden)
+https://jmp2.uk/plu-65a93be02fac9c00083cbac4.m3u8
+
+#EXTINF:-1 tvg-id="CarChase.se@DK" tvg-name="Car Chase (Sweden) DK" tvg-logo="https://images.pluto.tv/channels/65a93b0607e03a000895abda/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Car Chase (Sweden) DK
+https://jmp2.uk/plu-65a93b0607e03a000895abda.m3u8
+
+#EXTINF:-1 tvg-id="CarChase.se@NO" tvg-name="Car Chase (Sweden) NO" tvg-logo="https://images.pluto.tv/channels/65a93b0607e03a000895abda/colorLogoPNG.png" group-title="English: Cine y Series" tvg-language="English",Car Chase (Sweden) NO
+https://jmp2.uk/plu-65a93b870c7ff50008d1ca47.m3u8
 
 #EXTINF:-1 tvg-id="AMCEurope.uk@Hungary" tvg-name="like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AMC Europe Hungary" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="English: Cine y Series" tvg-language="English",like Gecko) Chrome/120.0.0.0 Safari/537.36" group-title="Movies",AMC Europe Hungary
 http://88.212.15.17/live/amc_hun/index.m3u8
@@ -1120,17 +1477,44 @@ https://jmp2.uk/plu-6452c814939a590008567a3b.m3u8
 #EXTINF:-1 tvg-id="90sKidsTV2.us@SD" tvg-name="90s Kids TV 2" tvg-logo="https://images.pluto.tv/channels/6452c77ed3fdde00080eb3a8/colorLogoPNG.png" group-title="English: Infantil y Familia" tvg-language="English",90s Kids TV 2
 https://jmp2.uk/plu-6452c77ed3fdde00080eb3a8.m3u8
 
+#EXTINF:-1 tvg-id="AkiliKids.ke@SD" tvg-name="Akili Kids!" tvg-logo="https://i.imgur.com/xFm2co6.png" group-title="English: Infantil y Familia" tvg-language="English",Akili Kids!
+https://m6.livecdn.io/akilikids.co.ke/akilikids.smil/playlist.m3u8
+
+#EXTINF:-1 tvg-id="AnimexHIDIVE.us@SD" tvg-name="Anime x HIDIVE" tvg-logo="https://i.imgur.com/v0BlxCa.png" group-title="English: Infantil y Familia" tvg-language="English",Anime x HIDIVE
+https://jmp2.uk/plu-6793eaa4bc03978b9bc63db1.m3u8
+
 #EXTINF:-1 tvg-id="Avatar.de@GB" tvg-name="Avatar (Germany)" tvg-logo="https://images.pluto.tv/channels/656df599c0fc8800089c75ab/colorLogoPNG.png" group-title="English: Infantil y Familia" tvg-language="English",Avatar (Germany)
 https://jmp2.uk/plu-656df599c0fc8800089c75ab.m3u8
 
 #EXTINF:-1 tvg-id="Avatar.se@DK" tvg-name="Avatar (Sweden)" tvg-logo="https://images.pluto.tv/channels/61c09b48d6d97900076e91c5/colorLogoPNG.png" group-title="English: Infantil y Familia" tvg-language="English",Avatar (Sweden)
 https://jmp2.uk/plu-61c09b48d6d97900076e91c5.m3u8
 
-#EXTINF:-1 tvg-id="BabySharkTV.us@SD" tvg-name="Baby Shark TV" tvg-logo="https://i.imgur.com/SbBKr8L.png" group-title="English: Infantil y Familia" tvg-language="English",Baby Shark TV
-https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="Boomerang.us@SD" tvg-name="Boomerang" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/960px-Boomerang_2014_logo.svg.png" group-title="English: Infantil y Familia" tvg-language="English",Boomerang
+http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
 
-#EXTINF:-1 tvg-id="BabyFirst.us@US" tvg-name="BabyFirst" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="English: Infantil y Familia" tvg-language="English",BabyFirst
-https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
+#EXTINF:-1 tvg-id="BotflixTV.us@HD" tvg-name="Botflix TV" tvg-logo="https://botflix.tv/assets/img/botflix-mark.90c6a6f9a4.webp" group-title="English: Infantil y Familia" tvg-language="English",Botflix TV
+https://hls.botflix.tv/tv/index.m3u8
+
+#EXTINF:-1 tvg-id="BratTV.us@SD" tvg-name="Brat TV" tvg-logo="https://i.imgur.com/Kkcp9Bk.png" group-title="English: Infantil y Familia" tvg-language="English",Brat TV
+https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/04072b68-dc6a-4d5e-98af-f356ba8d5063/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CampSpoopy.us@SD" tvg-name="Camp Spoopy" tvg-logo="https://img2.static-ottera.com/prod/tg/linear_channel/logo/640x360/camp-spoopy-2021_1920-x-1080_option-5.jpg" group-title="English: Infantil y Familia" tvg-language="English",Camp Spoopy
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=269
+
+#EXTINF:-1 tvg-id="CartoonClassics.pl@FAST" tvg-name="Cartoon Classics" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/3227c06e-333b-4b1b-b657-3e3ab99ebd06-width200-quality90.jpeg" group-title="English: Infantil y Familia" tvg-language="English",Cartoon Classics
+https://daiconnect.com/live/hls/tvup/rk-cartoonclassics/578f4b7eb725168349ec0af81b21d388/index.m3u8
+
+#EXTINF:-1 tvg-id="CartoonitoCEE.uk@Poland" tvg-name="Cartoonito CEE Poland" tvg-logo="https://i.imgur.com/9MrzLb1.png" group-title="English: Infantil y Familia" tvg-language="English",Cartoonito CEE Poland
+http://92.114.85.87:8007/play/a008
+
+#EXTINF:-1 tvg-id="CBeebies.pl@SD" tvg-name="CBeebies (Poland)" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/CBeebies.svg/960px-CBeebies.svg.png" group-title="English: Infantil y Familia" tvg-language="English",CBeebies (Poland)
+http://92.114.85.87:8017/play/a004/index.m3u8
+
+#EXTINF:-1 tvg-id="CartoonNetworkAsia.sg@SD" tvg-name="like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Animation;Kids",Cartoon Network Asia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="English: Infantil y Familia" tvg-language="English",like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Animation;Kids",Cartoon Network Asia
+https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network.m3u8
+
+#EXTINF:-1 tvg-id="CartoonitoAsia.sg@SD" tvg-name="like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Animation;Kids",Cartoonito Asia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cartoonito_-_Logo_2021.svg/960px-Cartoonito_-_Logo_2021.svg.png" group-title="English: Infantil y Familia" tvg-language="English",like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Animation;Kids",Cartoonito Asia
+http://cdn4.skygo.mn/live/disk1/Boomerang/HLSv3-FTA/Boomerang.m3u8
 
 ### --- English: Cultura y Documentales ---
 #EXTINF:-1 tvg-id="30ALoomeredTV.us@SD" tvg-name="30A Loomered TV" tvg-logo="https://cbs12.com/resources/media/0c1ecad8-fb09-4bb2-beaa-fc561dfe624a-small21x9_LoomerStill.jpg?1603419052801" group-title="English: Cultura y Documentales" tvg-language="English",30A Loomered TV
@@ -1145,26 +1529,242 @@ http://23.237.104.106:8080/USA_AMERICAN_HEROES/index.m3u8
 #EXTINF:-1 tvg-id="AnimalPlanet.us@East" tvg-name="Animal Planet (United States)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png" group-title="English: Cultura y Documentales" tvg-language="English",Animal Planet (United States)
 http://23.239.31.26:8989/animalplanet/index.m3u8
 
-#EXTINF:-1 tvg-id="AutenticHistory.de@SD" tvg-name="Autentic History" tvg-logo="https://d3b6luslimvglo.cloudfront.net/images/79/rlaxximages/channels-rescaled/icon-white/autentichistory_white.png" group-title="English: Cultura y Documentales" tvg-language="English",Autentic History
-https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8
-
-#EXTINF:-1 tvg-id="Backstage.us@SD" tvg-name="Backstage" tvg-logo="https://i.imgur.com/qcTNvNU.png" group-title="English: Cultura y Documentales" tvg-language="English",Backstage
-https://d2ah48mnofquik.cloudfront.net/Backstage.m3u8
-
 #EXTINF:-1 tvg-id="BATVEducationalChannel.us@SD" tvg-name="BATV Educational Channel" tvg-logo="https://i.imgur.com/eDoJqtg.png" group-title="English: Cultura y Documentales" tvg-language="English",BATV Educational Channel
 https://livestream.telvue.com/billerica2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8
 
-#EXTINF:-1 tvg-id="BBCEarth.uk@US" tvg-name="BBC Earth US" tvg-logo="https://i.imgur.com/nGSsUd4.png" group-title="English: Cultura y Documentales" tvg-language="English",BBC Earth US
-https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
-
 #EXTINF:-1 tvg-id="BeachTVFloridaAlabama.us@SD" tvg-name="Beach TV Florida & Alabama" tvg-logo="https://i.imgur.com/weypM9C.png" group-title="English: Cultura y Documentales" tvg-language="English",Beach TV Florida & Alabama
 http://media4.tripsmarter.com:1935/LiveTV/DTVHD/playlist.m3u8
-
-#EXTINF:-1 tvg-id="BeachTVKeyWestFloridaKeys.us@SD" tvg-name="Beach TV Key West & Florida Keys" tvg-logo="https://i.imgur.com/XhDBdff.png" group-title="English: Cultura y Documentales" tvg-language="English",Beach TV Key West & Florida Keys
-https://5ed325193d4e1.streamlock.net:444/LiveTV/KTVHD/playlist.m3u8
 
 #EXTINF:-1 tvg-id="BeachTVMyrtleBeachTheGrandStrand.us@SD" tvg-name="Beach TV Myrtle Beach & The Grand Strand" tvg-logo="https://i.imgur.com/aLYz7Bv.png" group-title="English: Cultura y Documentales" tvg-language="English",Beach TV Myrtle Beach & The Grand Strand
 http://media4.tripsmarter.com:1935/LiveTV/MTVHD/playlist.m3u8
 
 #EXTINF:-1 tvg-id="BeachTVPanamaCity.us@SD" tvg-name="Beach TV Panama City" tvg-logo="https://i.imgur.com/HCQDvEe.png" group-title="English: Cultura y Documentales" tvg-language="English",Beach TV Panama City
 http://media4.tripsmarter.com:1935/LiveTV/BTVHD/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BritBoxMysteries.us@SD" tvg-name="BritBox Mysteries" tvg-logo="https://i.imgur.com/PJdzoLN.png" group-title="English: Cultura y Documentales" tvg-language="English",BritBox Mysteries
+https://aegis-cloudfront-1.tubi.video/c95700f8-e51c-4a36-ad46-56f70fc9f1d9/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BUTV10.us@SD" tvg-name="BUTV10" tvg-logo="https://i.imgur.com/Iv1Fe67.png" group-title="English: Cultura y Documentales" tvg-language="English",BUTV10
+https://cdnapisec.kaltura.com/p/2184561/sp/218456100/playManifest/entryId/1_68qxw4eu/format/applehttp/a.m3u8
+
+#EXTINF:-1 tvg-id="BXArts.us@SD" tvg-name="BX Arts" tvg-logo="https://i.imgur.com/PF71rdZ.png" group-title="English: Cultura y Documentales" tvg-language="English",BX Arts
+https://reflect-stream-bronxnet.cablecast.tv/live-19/live/stream-2/live.m3u8
+
+#EXTINF:-1 tvg-id="BXCulture.us@SD" tvg-name="BX Culture" tvg-logo="https://i.imgur.com/PF71rdZ.png" group-title="English: Cultura y Documentales" tvg-language="English",BX Culture
+https://reflect-stream-bronxnet.cablecast.tv/live-7/live/stream-3/live.m3u8
+
+### --- English: Música ---
+#EXTINF:-1 tvg-id="30AMusic.us@SD" tvg-name="30A Music" tvg-logo="https://i.imgur.com/gNWg9tl.png" group-title="English: Música" tvg-language="English",30A Music
+https://30a-tv.com/music.m3u8
+
+#EXTINF:-1 tvg-id="360TuneBox.nl@SD" tvg-name="360TuneBox" tvg-logo="https://i.imgur.com/1Fyezng.png" group-title="English: Música" tvg-language="English",360TuneBox
+https://dash3.antik.sk/live/test_360_tunebox_medium_atk/playlist.m3u8
+
+#EXTINF:-1 tvg-id="981PearlFM.sx@SD" tvg-name="98.1 Pearl FM" tvg-logo="https://i.imgur.com/GY750xh.jpg" group-title="English: Música" tvg-language="English",98.1 Pearl FM
+https://live2.tensila.com/pearl-v-1.pearlfm/hls/live/mystream.m3u8
+
+#EXTINF:-1 tvg-id="ACECountryRadio.us@KPVMLD" tvg-name="ACE Country Radio KPVM-LD" tvg-logo="https://i.imgur.com/iPtuku6.png" group-title="English: Música" tvg-language="English",ACE Country Radio KPVM-LD
+https://2-fss-1.streamhoster.com/pl_122/206858-4412960-1/playlist.m3u8
+
+#EXTINF:-1 tvg-id="AfrobeatTVEntertainment.uk@SD" tvg-name="Afrobeat TV Entertainment" tvg-logo="https://i.imgur.com/232ndRK.png" group-title="English: Música" tvg-language="English",Afrobeat TV Entertainment
+https://stream.ecable.tv/afrobeats/index.m3u8
+
+#EXTINF:-1 tvg-id="AXSTV.us@SD" tvg-name="AXS TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AXS_TV_logo.svg/960px-AXS_TV_logo.svg.png" group-title="English: Música" tvg-language="English",AXS TV
+http://23.239.31.26:8989/axstv/index.m3u8
+
+#EXTINF:-1 tvg-id="BotflixRadioo.us@HD" tvg-name="Botflix Radioo" tvg-logo="https://botflix.tv/assets/img/botflix-mark.90c6a6f9a4.webp" group-title="English: Música" tvg-language="English",Botflix Radioo
+https://hls.botflix.tv/radioo/index.m3u8
+
+#EXTINF:-1 tvg-id="CaliforniaMusicChannel.us@SD" tvg-name="California Music Channel" tvg-logo="https://i.imgur.com/FyNot5W.png" group-title="English: Música" tvg-language="English",California Music Channel
+https://cmc-cmctv-cineverse.amagi.tv/playlist.m3u8
+
+# ============================================================
+# CANALES EN JAPONÉS (日本 / JAPAN)
+# ============================================================
+
+### --- Japonés: Noticias ---
+#EXTINF:-1 tvg-id="rch_90" tvg-name="Euronews" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/euronews.png" group-title="Japonés: Noticias" tvg-language="Japanese",Euronews
+https://cdn-apne1.tsv2.amagi.tv/linear/amg00882-euronewssa-euronewsengjp-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="MBSNews.jp" tvg-name="MBS News" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/106_mbs.png" group-title="Japonés: Noticias" tvg-language="Japanese",MBSニュース (Mainichi News Kansai)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-news5-cmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_103" tvg-name="NewsWorld" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/newsworld.png" group-title="Japonés: Noticias" tvg-language="Japanese",NewsWorld
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-newsworld-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="NipponTVNews.jp" tvg-name="Nippon TV News" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/104_ntvnews.png" group-title="Japonés: Noticias" tvg-language="Japanese",日テレNEWS (Nippon TV News 24)
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-news1hlscmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="Weathernews.jp@SD" tvg-name="Weathernews" tvg-logo="" group-title="Japonés: Noticias" tvg-language="Japanese",Weathernews
+https://rch01e-alive-hls.akamaized.net/38fb45b25cdb05a1/out/v1/4e907bfabc684a1dae10df8431a84d21/index.m3u8
+
+#EXTINF:-1 tvg-id="Weathernews.jp" tvg-name="Weathernews Japan" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/106_whethernews.png" group-title="Japonés: Noticias" tvg-language="Japanese",ウェザーニュースLiVE (Weathernews Live)
+https://rch01e-alive-hls.akamaized.net/38fb45b25cdb05a1/out/v1/4e907bfabc684a1dae10df8431a84d21/index.m3u8
+
+#EXTINF:-1 tvg-id="rch_45" tvg-name="ウェザーニュースLiVE" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/106_whethernews.png" group-title="Japonés: Noticias" tvg-language="Japanese",ウェザーニュースLiVE
+https://rch01e-alive-hls.akamaized.net/38fb45b25cdb05a1/out/v1/4e907bfabc684a1dae10df8431a84d21/index.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_entns" tvg-name="エンタメニュース (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_entns.png" group-title="Japonés: Noticias" tvg-language="Japanese",エンタメニュース (FAST)
+https://livetv.fastv.jp/channel_assembly/6960899D64B80F9C740C/master.m3u8
+
+### --- Japonés: Deportes ---
+#EXTINF:-1 tvg-id="rch_89" tvg-name="TOP BARÇA" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/top_barca.png" group-title="Japonés: Deportes" tvg-language="Japanese",TOP BARÇA
+https://cdn-apne1.tsv2.amagi.tv/linear/amg17560-fcbarcelona-fcbenglishcmag-rakutenjp/playlist.m3u8
+
+### --- Japonés: Infantil y Familia ---
+#EXTINF:-1 tvg-id="MAXAnime.jp" tvg-name="MAX Anime" tvg-logo="https://i.imgur.com/Oj3hEBh.jpg" group-title="Japonés: Infantil y Familia" tvg-language="Japanese",MAX Anime TV
+https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="TOKYO MX チャンネル" tvg-logo="https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/108_mx.png" group-title="Japonés: Infantil y Familia" tvg-language="Japanese",TOKYO MX チャンネル
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-rakutenjp/playlist.m3u8
+
+### --- Japonés: Entretenimiento ---
+#EXTINF:-1 tvg-id="rch_70" tvg-name="Bloomberg TV+" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/bloomberg_tv.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Bloomberg TV+
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01601-bloomberg-bloombergplus-hls-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="CGNTVJapan.jp@SD" tvg-name="CGNTV Japan" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",CGNTV Japan
+https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGNWebLiveJP.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_snyon" tvg-name="FASHIONPLUS (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fashionplus.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",FASHIONPLUS (FAST)
+https://livetv.fastv.jp/channel_assembly/69609952725E0FA3B987/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_64" tvg-name="FUEL TV" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fuel_tv.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",FUEL TV
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01074-fueltv-fueltvjpcmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="Gaki no Tsukai (English Subs)" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Gaki no Tsukai (English Subs)
+https://hamada.gaki-no-tsukai.stream/hls/test.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_bgolf" tvg-name="GOLF LIFE (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/golf_life.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",GOLF LIFE (FAST)
+https://livetv.fastv.jp/channel_assembly/69607D5C725E103DDF9D/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_112" tvg-name="GSTV" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/gstv.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",GSTV
+https://rch01e-alive-hls.akamaized.net/15bcd044c531aa99/out/v1/339db39dc83c421f94a8cebb777e4d02/index.m3u8
+
+#EXTINF:-1 tvg-id="GSTV.jp@SD" tvg-name="GSTV" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",GSTV
+https://japaneast.av.mk.io/mediakindcdn-mediakind/ca01a143-f823-4432-b670-c22ff9643ce4/index.qfm/manifest(format=m3u8-cmaf)
+
+#EXTINF:-1 tvg-id="JOJGDTV.jp@SD" tvg-name="JOJG-DTV" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",JOJG-DTV
+https://tv-stream-test.daydreamer-json.cc/fe8bf835820fb530467f75a9cb761504/hevc/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_comdy" tvg-name="LeminoTV (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/leminotv.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",LeminoTV (FAST)
+https://livetv.fastv.jp/channel_assembly/696082290000105F1525/master.m3u8
+
+#EXTINF:-1 tvg-id="NHKWorldJapan.jp" tvg-name="NHK WORLD JAPAN" tvg-logo="https://i.imgur.com/Mhw1Ihk.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",NHK WORLD JAPAN
+https://media-osa.hls.nhkworld.jp/hls/w/live/master.m3u8
+
+#EXTINF:-1 tvg-id="NHKWorldPremium.jp@SD" tvg-name="NHK World Premium" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",NHK World Premium
+https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8
+
+#EXTINF:-1 tvg-id="NHKWorldJapan.jp" tvg-name="NHK World-Japan" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/nhk_world_japan.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",NHK World-Japan
+https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8
+
+#EXTINF:-1 tvg-id="NHKWorldJapan.jp@SD" tvg-name="NHK World-Japan" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",NHK World-Japan
+https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
+
+#EXTINF:-1 tvg-id="NHKWorldJapan.jp@SD" tvg-name="NHK World-Japan" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",NHK World-Japan
+https://cdn.pishow.tv/ott/live/455/master.m3u8
+
+#EXTINF:-1 tvg-id="NHKWorldJapan.jp@HD" tvg-name="NHK World-Japan HD" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",NHK World-Japan HD
+http://170.83.16.50/NHK_WORLD/index.m3u8
+
+#EXTINF:-1 tvg-id="rch_102" tvg-name="QVC" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/qvc.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",QVC
+https://d1flvb4iqlercm.cloudfront.net/r-channel/live.m3u8
+
+#EXTINF:-1 tvg-id="QVC.jp@SD" tvg-name="QVC" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",QVC
+https://d1flvb4iqlercm.cloudfront.net/live/live_1080p_2nd.m3u8
+
+#EXTINF:-1 tvg-id="rch_120" tvg-name="Reuters 60" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/reuters_60.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Reuters 60
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00453-reuters-reuters-hls-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="ShopChannel.jp@SD" tvg-name="Shop Channel" tvg-logo="" group-title="Japonés: Entretenimiento" tvg-language="Japanese",Shop Channel
+https://stream3.shopch.jp/HLS/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_83" tvg-name="STOCK VOICE" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/stock_voice.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",STOCK VOICE
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-stockvoice-cmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_104" tvg-name="that’s 70s" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/thats_70s.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",that’s 70s
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-lightningnow70s-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_105" tvg-name="that’s 80s" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/thats_80s.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",that’s 80s
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-lightningnow80s-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_106" tvg-name="that’s 90s00s" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/thats_90s00s.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",that’s 90s00s
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-lightning-now90s00s-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_107" tvg-name="that’s Rock" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/thats_rock.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",that’s Rock
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-lightningnowrock-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_kids" tvg-name="アニマックス FREE (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_kids.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",アニマックス FREE (FAST)
+https://livetv.fastv.jp/channel_assembly/69608FB2725E0FA3B972/master.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_asdrm" tvg-name="エンタメ・アジア (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_asdrm.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",エンタメ・アジア (FAST)
+https://livetv.fastv.jp/channel_assembly/696078CF64B81069221E/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_37" tvg-name="エンタメ～テレDEEP" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_37.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",エンタメ～テレDEEP
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-nagoyanextcmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_65" tvg-name="キッズ" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_65.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",キッズ
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-kids-english-cmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_camng" tvg-name="キャンプ・アウトドア (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_camng.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",キャンプ・アウトドア (FAST)
+https://livetv.fastv.jp/channel_assembly/69607E1D725E0FB5AC23/master.m3u8
+
+#EXTINF:-1 tvg-id="ShopChannel.jp" tvg-name="ショップチャンネル" tvg-logo="https://i.imgur.com/CCMAF7W.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",ショップチャンネル
+https://stream3.shopch.jp/HLS/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_98" tvg-name="セクシーエンタメチャンネル" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_98.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",セクシーエンタメチャンネル
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-rvariety-cmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_35" tvg-name="パチンコ・パチスロ" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_35.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",パチンコ・パチスロ
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-pachislocmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_jpthp" tvg-name="ぴあ落語ざんまい (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_jpthp.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",ぴあ落語ざんまい (FAST)
+https://livetv.fastv.jp/channel_assembly/69608EE9725E0F73BF30/master.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_busns" tvg-name="ビジネス・プレミアム (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_busns.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",ビジネス・プレミアム (FAST)
+https://livetv.fastv.jp/channel_assembly/69607EBD725E0F65BEE4/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_113" tvg-name="ぷれいば！" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_113.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",ぷれいば！
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-game-cmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_pett1" tvg-name="ペットTV (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_pett1.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",ペットTV (FAST)
+https://livetv.fastv.jp/channel_assembly/69551F080000E209AD09/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_34" tvg-name="ムビドラTV" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_34.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",ムビドラTV
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-moviecmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="rch_86" tvg-name="ワンニャンチャンネル" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_86.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",ワンニャンチャンネル
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-pet-cmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_news1" tvg-name="丸ごと九州 (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_news1.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",丸ごと九州 (FAST)
+https://livetv.fastv.jp/channel_assembly/696090F573F51039B31F/master.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_hokkaido" tvg-name="丸ごと北海道 (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_hokkaido.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",丸ごと北海道 (FAST)
+https://livetv.fastv.jp/channel_assembly/69998D0964B83951E552/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_114" tvg-name="九州・沖縄　街ネタ" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_114.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",九州・沖縄　街ネタ
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-local-contents-cmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_travl" tvg-name="今日のごはんなに? (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_travl.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",今日のごはんなに? (FAST)
+https://livetv.fastv.jp/channel_assembly/696095BC725E0FE5F3E9/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_40" tvg-name="刺激ストロング" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_40.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",刺激ストロング
+https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-shigekicmaf-rakutenjp/playlist.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_goshogi" tvg-name="囲碁・将棋ライト (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_goshogi.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",囲碁・将棋ライト (FAST)
+https://livetv.fastv.jp/channel_assembly/69998C7B725E30DA4170/master.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_samri" tvg-name="時代劇TV (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_samri.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",時代劇TV (FAST)
+https://livetv.fastv.jp/channel_assembly/696074B664B80F46A876/master.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_tokai" tvg-name="東海ロキポ (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_tokai.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",東海ロキポ (FAST)
+https://livetv.fastv.jp/channel_assembly/69998DB5725E30535DA6/master.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_recip" tvg-name="観るたび (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_recip.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",観るたび (FAST)
+https://livetv.fastv.jp/channel_assembly/6960965C64B80F2C027D/master.m3u8
+
+#EXTINF:-1 tvg-id="fastch_v2_krdrm" tvg-name="韓流チャンネル (FAST)" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/fastch_v2_krdrm.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",韓流チャンネル (FAST)
+https://livetv.fastv.jp/channel_assembly/6960905473F5101B6A17/master.m3u8
+
+#EXTINF:-1 tvg-id="rch_74" tvg-name="麻雀" tvg-logo="https://jp-epg-26f0ce.gitlab.io/logos/rch_74.png" group-title="Japonés: Entretenimiento" tvg-language="Japanese",麻雀
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-mahjong-cmaf1-rakutenjp/playlist.m3u8

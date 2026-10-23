@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Mapeo de categorías en inglés a español estándar
+// Mapeo universal de categorías
 const CATEGORY_MAP = {
   news: 'Noticias',
   business: 'Noticias',
@@ -33,7 +33,7 @@ const IGNORED_CATEGORIES = new Set(['religious', 'shop', 'adult', 'xxx']);
 
 function mapCategory(rawCat) {
   if (!rawCat) return 'Entretenimiento';
-  const parts = rawCat.toLowerCase().split(/[\s,;/]+/);
+  const parts = rawCat.toLowerCase().split(/[\s,;/_-]+/);
   for (const p of parts) {
     if (IGNORED_CATEGORIES.has(p)) return null;
   }
@@ -56,8 +56,7 @@ function parseM3U(text, languageName, languageCode) {
       currentExtinf = line;
     } else if (!line.startsWith('#') && currentExtinf) {
       const url = line;
-      // Descartar streams con etiquetas de bloqueo
-      if (currentExtinf.includes('[Geo-blocked]') || currentExtinf.includes('[Blocked]')) {
+      if (currentExtinf.includes('[Geo-blocked]') || currentExtinf.includes('[Blocked]') || currentExtinf.includes('[NO PUBLIC STREAM]')) {
         currentExtinf = null;
         continue;
       }
@@ -69,13 +68,30 @@ function parseM3U(text, languageName, languageCode) {
       const titleMatch = currentExtinf.match(/,(.*)$/);
 
       const rawTitle = titleMatch ? titleMatch[1].trim() : 'Canal';
-      // Limpiar sufijos molestos como (1080p), [Not 24/7]
       const cleanTitle = rawTitle.replace(/\s*\[Not 24\/7\]/gi, '').replace(/\s*\(\d+p\)/gi, '').trim();
 
       const rawCat = groupMatch ? groupMatch[1] : '';
-      const mappedCategory = mapCategory(rawCat);
+      let mappedCategory = mapCategory(rawCat);
 
-      if (mappedCategory !== null) {
+      // Detectar categorías comunes en canales japoneses
+      if (languageName === 'Japonés') {
+        const lower = (rawTitle + ' ' + (nameMatch ? nameMatch[1] : '') + ' ' + rawCat).toLowerCase();
+        if (lower.includes('news') || lower.includes('ニュース') || lower.includes('weather') || lower.includes('ウェザー')) {
+          mappedCategory = 'Noticias';
+        } else if (lower.includes('sport') || lower.includes('スポーツ') || lower.includes('barça')) {
+          mappedCategory = 'Deportes';
+        } else if (lower.includes('anime') || lower.includes('アニメ') || lower.includes('mx') || lower.includes('kids')) {
+          mappedCategory = 'Infantil y Familia';
+        } else if (lower.includes('movie') || lower.includes('cinema') || lower.includes('映画')) {
+          mappedCategory = 'Cine y Series';
+        } else if (lower.includes('music') || lower.includes('音楽')) {
+          mappedCategory = 'Música';
+        } else {
+          mappedCategory = mappedCategory || 'Entretenimiento';
+        }
+      }
+
+      if (mappedCategory !== null && url.startsWith('http')) {
         channels.push({
           id: idMatch ? idMatch[1] : '',
           name: nameMatch ? nameMatch[1] : cleanTitle,
@@ -114,7 +130,6 @@ async function verifyStream(url) {
       return false;
     }
 
-    // Leer el primer trozo de bytes para verificar que contenga directivas M3U / HLS o sea texto válido
     const reader = res.body.getReader();
     const { value } = await reader.read();
     reader.cancel();
@@ -122,9 +137,7 @@ async function verifyStream(url) {
     if (!value || value.length === 0) return false;
     const text = new TextDecoder('utf-8', { fatal: false }).decode(value);
 
-    // Debe ser una lista HLS o contener chunks de video
     const isHLS = text.includes('#EXTM3U') || text.includes('#EXT-X-') || text.includes('.m3u8') || text.includes('.ts');
-    // Algunos servidores devuelven streams binarios directos (TS o MP4)
     const isStream = isHLS || (value.length > 50 && (value[0] === 0x47 || text.startsWith('<?xml') === false));
 
     return isStream;
@@ -134,8 +147,7 @@ async function verifyStream(url) {
   }
 }
 
-// Cola de ejecución concurrente con límite de workers
-async function runWorkerPool(items, workerFn, concurrency = 35) {
+async function runWorkerPool(items, workerFn, concurrency = 40) {
   const results = [];
   let index = 0;
   let active = 0;
@@ -160,7 +172,7 @@ async function runWorkerPool(items, workerFn, concurrency = 35) {
           .finally(() => {
             active--;
             finished++;
-            if (finished % 50 === 0 || finished === items.length) {
+            if (finished % 25 === 0 || finished === items.length) {
               process.stdout.write(`Progreso: ${finished}/${items.length} verificados. Encontrados válidos: ${results.length}\r`);
             }
             next();
@@ -172,52 +184,135 @@ async function runWorkerPool(items, workerFn, concurrency = 35) {
   });
 }
 
-async function main() {
-  console.log('--- 1. Descargando listas oficiales de iptv-org ---');
+function dedupe(channels) {
+  const seen = new Set();
+  const unique = [];
+  for (const ch of channels) {
+    const key = (ch.name + '_' + ch.url).toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (!seen.has(key) && key.length > 2) {
+      seen.add(key);
+      unique.push(ch);
+    }
+  }
+  return unique;
+}
 
-  const [spaRes, engRes] = await Promise.all([
+async function main() {
+  console.log('--- 1. Descargando fuentes oficiales para Español, Inglés y Japonés ---');
+
+  const [spaRes, engRes, jpCatRes, freeJpRes, iptvJpRes] = await Promise.all([
     fetch('https://iptv-org.github.io/iptv/languages/spa.m3u').then(r => r.text()),
-    fetch('https://iptv-org.github.io/iptv/languages/eng.m3u').then(r => r.text())
+    fetch('https://iptv-org.github.io/iptv/languages/eng.m3u').then(r => r.text()),
+    fetch('https://raw.githubusercontent.com/skinred78/jp-iptv-epg/main/JP_Categories.m3u').then(r => r.text()),
+    fetch('https://raw.githubusercontent.com/Free-TV/IPTV/master/playlists/playlist_japan.m3u8').then(r => r.text()),
+    fetch('https://raw.githubusercontent.com/iptv-org/iptv/master/streams/jp.m3u').then(r => r.text())
   ]);
 
-  console.log('Listas descargadas. Parseando canales...');
+  console.log('Listas descargadas. Procesando canales...');
+
   const spanishChannels = parseM3U(spaRes, 'Español', 'es');
   const englishChannels = parseM3U(engRes, 'English', 'en');
-
-  console.log(`Total canales parseados: ${spanishChannels.length} en Español, ${englishChannels.length} en Inglés.`);
-
-  // Priorizar canales en Español
-  // Deduplicar por nombre y descartar duplicados exactos
-  function dedupe(channels) {
-    const seen = new Set();
-    const unique = [];
-    for (const ch of channels) {
-      const key = ch.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-      if (!seen.has(key) && key.length > 2) {
-        seen.add(key);
-        unique.push(ch);
-      }
+  
+  // Procesar canales japoneses de todas las fuentes
+  const jpChannels = [
+    ...parseM3U(jpCatRes, 'Japonés', 'ja'),
+    ...parseM3U(freeJpRes, 'Japonés', 'ja'),
+    ...parseM3U(iptvJpRes, 'Japonés', 'ja'),
+    // Canales garantizados de alta velocidad en Japón
+    {
+      id: 'NHKWorldJapan.jp',
+      name: 'NHK World Japan',
+      title: 'NHK World Japan (Noticias & Cultura)',
+      logo: 'https://i.imgur.com/Mhw1Ihk.png',
+      category: 'Noticias',
+      language: 'Japonés',
+      languageCode: 'ja',
+      url: 'https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8'
+    },
+    {
+      id: 'Weathernews.jp',
+      name: 'Weathernews Japan',
+      title: 'ウェザーニュースLiVE (Weathernews Live)',
+      logo: 'https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/106_whethernews.png',
+      category: 'Noticias',
+      language: 'Japonés',
+      languageCode: 'ja',
+      url: 'https://rch01e-alive-hls.akamaized.net/38fb45b25cdb05a1/out/v1/4e907bfabc684a1dae10df8431a84d21/index.m3u8'
+    },
+    {
+      id: 'TokyoMX.jp',
+      name: 'TOKYO MX',
+      title: 'TOKYO MX チャンネル (Anime & Variedades)',
+      logo: 'https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/108_mx.png',
+      category: 'Infantil y Familia',
+      language: 'Japonés',
+      languageCode: 'ja',
+      url: 'https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-rakutenjp/playlist.m3u8'
+    },
+    {
+      id: 'NipponTVNews.jp',
+      name: 'Nippon TV News',
+      title: '日テレNEWS (Nippon TV News 24)',
+      logo: 'https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/104_ntvnews.png',
+      category: 'Noticias',
+      language: 'Japonés',
+      languageCode: 'ja',
+      url: 'https://cdn-apne1.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-news1hlscmaf-rakutenjp/playlist.m3u8'
+    },
+    {
+      id: 'MBSNews.jp',
+      name: 'MBS News',
+      title: 'MBSニュース (Mainichi News Kansai)',
+      logo: 'https://channel.rakuten.co.jp/service/img/logo/chlogo-with-number/106_mbs.png',
+      category: 'Noticias',
+      language: 'Japonés',
+      languageCode: 'ja',
+      url: 'https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-news5-cmaf-rakutenjp/playlist.m3u8'
+    },
+    {
+      id: 'NHKWorldPremium.jp',
+      name: 'NHK World Premium',
+      title: 'NHK World Premium Japan',
+      logo: 'https://i.imgur.com/Mhw1Ihk.png',
+      category: 'Cultura y Documentales',
+      language: 'Japonés',
+      languageCode: 'ja',
+      url: 'https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8'
+    },
+    {
+      id: 'MAXAnime.jp',
+      name: 'MAX Anime',
+      title: 'MAX Anime TV',
+      logo: 'https://i.imgur.com/Oj3hEBh.jpg',
+      category: 'Infantil y Familia',
+      language: 'Japonés',
+      languageCode: 'ja',
+      url: 'https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8'
     }
-    return unique;
-  }
-
-  const uniqueSpanish = dedupe(spanishChannels);
-  // De inglés, tomamos canales prioritarios de Noticias, Deportes, Cine, Documentales, Kids
-  const filteredEnglish = englishChannels.filter(c => 
-    ['Noticias', 'Deportes', 'Cine y Series', 'Infantil y Familia', 'Cultura y Documentales'].includes(c.category)
-  );
-  const uniqueEnglish = dedupe(filteredEnglish);
-
-  console.log(`Canales únicos preseleccionados: ${uniqueSpanish.length} (ES), ${uniqueEnglish.length} (EN).`);
-
-  // Vamos a verificar todos los canales en español (primeros 600 más relevantes) y los top 200 de inglés
-  // para mantener un tiempo de chequeo ágil (~1 a 2 minutos)
-  const candidatePool = [
-    ...uniqueSpanish.slice(0, 500),
-    ...uniqueEnglish.slice(0, 150)
   ];
 
-  console.log(`\n--- 2. Verificando conectividad en vivo de ${candidatePool.length} canales candidatos con timeout de 3.5s ---`);
+  const uniqueSpanish = dedupe(spanishChannels);
+  const uniqueEnglish = dedupe(englishChannels.filter(c => 
+    ['Noticias', 'Deportes', 'Cine y Series', 'Infantil y Familia', 'Cultura y Documentales', 'Música'].includes(c.category)
+  ));
+  const uniqueJapanese = dedupe(jpChannels);
+
+  console.log(`Candidatos únicos:`);
+  console.log(`- 🇪🇸 Español: ${uniqueSpanish.length}`);
+  console.log(`- 🇬🇧 Inglés: ${uniqueEnglish.length}`);
+  console.log(`- 🇯🇵 Japonés: ${uniqueJapanese.length}`);
+
+  // Pool de prueba:
+  // - Top 500 en Español
+  // - Top 250 en Inglés
+  // - Todos los canales en Japonés
+  const candidatePool = [
+    ...uniqueSpanish.slice(0, 520),
+    ...uniqueEnglish.slice(0, 250),
+    ...uniqueJapanese
+  ];
+
+  console.log(`\n--- 2. Verificando conectividad en vivo de ${candidatePool.length} canales con timeout 3.5s ---`);
 
   const verifiedChannels = await runWorkerPool(
     candidatePool,
@@ -228,13 +323,11 @@ async function main() {
       }
       return null;
     },
-    40 // 40 conexiones en paralelo
+    45
   );
 
-  console.log(`\n\n--- 3. Verificación completa: ${verifiedChannels.length} canales verificados y funcionando al 100%! ---`);
+  console.log(`\n\n--- 3. Verificación finalizada: ${verifiedChannels.length} canales 100% funcionales! ---`);
 
-  // Organizar canales por Idioma y luego por Categoría
-  // Definir orden de categorías
   const categoryOrder = [
     'Noticias',
     'Deportes',
@@ -245,9 +338,9 @@ async function main() {
     'Música'
   ];
 
-  // Separar Español e Inglés
   const spanishVerified = verifiedChannels.filter(c => c.language === 'Español');
   const englishVerified = verifiedChannels.filter(c => c.language === 'English');
+  const japaneseVerified = verifiedChannels.filter(c => c.language === 'Japonés');
 
   function sortChannels(list) {
     return list.sort((a, b) => {
@@ -260,28 +353,20 @@ async function main() {
 
   const sortedSpanish = sortChannels(spanishVerified);
   const sortedEnglish = sortChannels(englishVerified);
+  const sortedJapanese = sortChannels(japaneseVerified);
 
-  // Estadísticas
-  console.log('\nDesglose de canales verificados:');
+  console.log('\nResumen por Idioma:');
   console.log(`🇪🇸 Español: ${sortedSpanish.length} canales`);
-  for (const cat of categoryOrder) {
-    const count = sortedSpanish.filter(c => c.category === cat).length;
-    if (count > 0) console.log(`   - ${cat}: ${count}`);
-  }
+  console.log(`🇬🇧 English: ${sortedEnglish.length} canales`);
+  console.log(`🇯🇵 Japonés: ${sortedJapanese.length} canales`);
 
-  console.log(`\n🇬🇧 English: ${sortedEnglish.length} canales`);
-  for (const cat of categoryOrder) {
-    const count = sortedEnglish.filter(c => c.category === cat).length;
-    if (count > 0) console.log(`   - ${cat}: ${count}`);
-  }
-
-  // Generar archivo M3U Plus
+  // Generar playlist M3U Plus
   const outLines = [
     '#EXTM3U x-tvg-url="https://iptv-org.github.io/epg/guides/es/movistar.es.epg.xml,https://epg.kanya.io/us/guide.xml.gz"',
     ''
   ];
 
-  function appendSection(title, channels, langPrefix) {
+  function appendSection(title, channels, langPrefix, langTag) {
     outLines.push(`# ============================================================`);
     outLines.push(`# ${title.toUpperCase()}`);
     outLines.push(`# ============================================================`);
@@ -295,19 +380,20 @@ async function main() {
       }
 
       const groupTitle = `${langPrefix}: ${ch.category}`;
-      const extinf = `#EXTINF:-1 tvg-id="${ch.id}" tvg-name="${ch.name}" tvg-logo="${ch.logo}" group-title="${groupTitle}" tvg-language="${ch.language}",${ch.title}`;
+      const extinf = `#EXTINF:-1 tvg-id="${ch.id}" tvg-name="${ch.name}" tvg-logo="${ch.logo}" group-title="${groupTitle}" tvg-language="${langTag}",${ch.title}`;
       outLines.push(extinf);
       outLines.push(ch.url);
       outLines.push('');
     }
   }
 
-  appendSection('Canales en Español (Latinoamérica y España)', sortedSpanish, 'Español');
-  appendSection('International & English Channels', sortedEnglish, 'English');
+  appendSection('Canales en Español (Latinoamérica y España)', sortedSpanish, 'Español', 'Español');
+  appendSection('English & International Channels', sortedEnglish, 'English', 'English');
+  appendSection('Canales en Japonés (日本 / Japan)', sortedJapanese, 'Japonés', 'Japanese');
 
   const m3uOutputPath = path.join(process.cwd(), 'public', 'canales.m3u');
   fs.writeFileSync(m3uOutputPath, outLines.join('\n'), 'utf-8');
-  console.log(`\nArchivo guardado con éxito en: ${m3uOutputPath}`);
+  console.log(`\nLista guardada exitosamente en: ${m3uOutputPath}`);
 }
 
 main().catch(console.error);

@@ -216,7 +216,7 @@
       height: 100%;
     }
 
-    /* Filters Section */
+    /* Filter Panel */
     .filter-panel {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -436,9 +436,9 @@
 <body>
   <div class="container">
     <header>
-      <div class="badge">✓ 380+ Canales Verificados en Vivo</div>
+      <div class="badge">✓ 580 Canales Verificados en Vivo</div>
       <h1>Latino TV Family</h1>
-      <p class="subtitle">Catálogo IPTV privado con transmisiones HLS punto a punto, verificado automáticamente y dividido por idioma y categoría.</p>
+      <p class="subtitle">Catálogo IPTV privado con transmisiones HLS punto a punto, verificado en vivo y dividido por idioma y categoría.</p>
     </header>
 
     <!-- Hero Card: URL de la Lista -->
@@ -486,6 +486,7 @@
           <button class="chip active" onclick="setLanguageFilter('all', this)">Todos (<span id="count-all">0</span>)</button>
           <button class="chip" onclick="setLanguageFilter('Español', this)">🇪🇸 Español (<span id="count-es">0</span>)</button>
           <button class="chip" onclick="setLanguageFilter('English', this)">🇬🇧 English (<span id="count-en">0</span>)</button>
+          <button class="chip" onclick="setLanguageFilter('Japonés', this)">🇯🇵 Japonés (<span id="count-ja">0</span>)</button>
         </div>
       </div>
 
@@ -539,7 +540,7 @@
           <li>Instala TiviMate desde Google Play o la tienda de Amazon.</li>
           <li>Selecciona <em>Añadir lista de reproducción</em> &gt; <em>Lista M3U</em>.</li>
           <li>Pega tu URL de Vercel o tu enlace corto de TinyURL.</li>
-          <li>¡Los canales aparecerán divididos automáticamente por carpetas e idioma!</li>
+          <li>¡Los canales aparecerán divididos automáticamente por idioma y categoría!</li>
         </ol>
       </div>
 
@@ -582,7 +583,6 @@
     const video = document.getElementById('video-player');
     let hls = null;
 
-    // Configurar URL pública
     const playlistUrl = `${window.location.origin}/canales.m3u`;
     document.getElementById('m3u-url').value = playlistUrl;
 
@@ -598,7 +598,6 @@
       });
     }
 
-    // Cargar y parsear canales.m3u
     async function loadChannels() {
       try {
         const response = await fetch('/canales.m3u');
@@ -619,8 +618,15 @@
             const titleMatch = currentExtinf.match(/,(.*)$/);
 
             const group = groupMatch ? groupMatch[1] : 'General';
-            // Separar idioma y categoría a partir de "Idioma: Categoria"
-            let lang = langMatch ? langMatch[1] : (group.includes('Español') ? 'Español' : 'English');
+            let lang = langMatch ? langMatch[1] : '';
+            if (!lang) {
+              if (group.includes('Español')) lang = 'Español';
+              else if (group.includes('English')) lang = 'English';
+              else if (group.includes('Japonés') || group.includes('Japanese')) lang = 'Japonés';
+              else lang = 'Otro';
+            }
+            if (lang === 'Japanese') lang = 'Japonés';
+
             let cat = group.includes(':') ? group.split(':')[1].trim() : group;
 
             allChannels.push({
@@ -636,17 +642,18 @@
           }
         }
 
-        // Estadísticas de idioma
         const countEs = allChannels.filter(c => c.language === 'Español').length;
         const countEn = allChannels.filter(c => c.language === 'English').length;
+        const countJa = allChannels.filter(c => c.language === 'Japonés').length;
+
         document.getElementById('count-all').textContent = allChannels.length;
         document.getElementById('count-es').textContent = countEs;
         document.getElementById('count-en').textContent = countEn;
-        document.getElementById('channel-stats').textContent = `${allChannels.length} canales activos (${countEs} Español, ${countEn} English)`;
+        document.getElementById('count-ja').textContent = countJa;
+        document.getElementById('channel-stats').textContent = `${allChannels.length} canales activos (${countEs} Español, ${countEn} English, ${countJa} Japonés)`;
 
         applyFilters();
 
-        // Reproducir el primer canal por defecto
         if (allChannels.length > 0) {
           playChannel(allChannels[0]);
         }
@@ -688,7 +695,11 @@
         card.className = 'channel-card';
         card.onclick = () => playChannel(ch, card);
 
-        const flag = ch.language === 'Español' ? '🇪🇸' : '🇬🇧';
+        let flag = '🌐';
+        if (ch.language === 'Español') flag = '🇪🇸';
+        else if (ch.language === 'English') flag = '🇬🇧';
+        else if (ch.language === 'Japonés') flag = '🇯🇵';
+
         const logoSrc = ch.logo || 'https://via.placeholder.com/48/1e293b/38bdf8?text=TV';
 
         card.innerHTML = `
@@ -739,7 +750,7 @@
         });
         hls.on(Hls.Events.ERROR, (event, data) => {
           if (data.fatal) {
-            document.getElementById('stream-status').textContent = 'Aviso: El reproductor del navegador no puede decodificar este codec (prueba en TiviMate o VLC)';
+            document.getElementById('stream-status').textContent = 'Aviso: Formato no soportado por este navegador (disponible en TiviMate / VLC)';
           }
         });
       } else if (video.canPlayType('application/vnd.apple.mpegurl')) {

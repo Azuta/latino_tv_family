@@ -2,7 +2,7 @@
 
 Servicio de IPTV privado, gratuito y de alta disponibilidad alojado en **Vercel** y versionado en **GitHub**, diseñado para reproducir directamente transmisiones HLS (`.m3u8`) en Smart TVs, TV Box y teléfonos móviles sin consumir ancho de banda de tu hogar ni requerir un servidor dedicado.
 
-El catálogo cuenta con **más de 380 canales verificados en vivo**, organizados rigurosamente por **idioma** y **categoría**, libres de geobloqueos y canales caídos.
+El catálogo cuenta con **580 canales verificados en vivo**, organizados rigurosamente por **idioma** y **categoría**, libres de geobloqueos y canales caídos.
 
 ---
 
@@ -10,9 +10,10 @@ El catálogo cuenta con **más de 380 canales verificados en vivo**, organizados
 
 | Idioma | Canales | Categorías Disponibles |
 | :--- | :---: | :--- |
-| 🇪🇸 **Español** | **305** | Noticias (24), Cine & Series (25), Deportes (7), Infantil & Familia (13), Entretenimiento (208), Cultura & Documentales (13), Música (15) |
-| 🇬🇧 **English** | **78** | News (26), Sports (7), Movies & Series (27), Kids & Family (6), Culture & Docs (12) |
-| **TOTAL** | **383** | **100% Verificados en tiempo real** |
+| 🇪🇸 **Español** | **353** | Noticias, Deportes, Cine & Series, Infantil & Familia, Entretenimiento, Cultura & Documentales, Música |
+| 🇬🇧 **English** | **166** | News, Sports, Movies & Series, Kids & Family, Entertainment, Culture & Docs, Music |
+| 🇯🇵 **Japonés (日本)** | **61** | Noticias (NHK World, 日テレNEWS, MBS, Weathernews), Anime & Kids (TOKYO MX, MAX Anime), Cine & Entretenimiento, Cultura |
+| **TOTAL** | **580** | **100% Verificados en tiempo real** |
 
 ---
 
@@ -42,12 +43,12 @@ El catálogo cuenta con **más de 380 canales verificados en vivo**, organizados
 latino_tv_family/
 ├── vercel.json                 # Configuración de cabeceras HTTP (CORS, Mime-type M3U, Cache)
 ├── public/
-│   ├── canales.m3u             # Lista maestra M3U Plus (+380 canales con logos y EPG)
+│   ├── canales.m3u             # Lista maestra M3U Plus (580 canales con logos y EPG)
 │   └── index.html              # Portal web interactivo con reproductor HLS y filtros
 ├── api/
 │   └── playlist.js             # API Serverless para filtrado dinámico (?idioma=, ?categoria=, ?format=json)
 ├── scripts/
-│   └── fetch_and_verify.js     # Script automatizado de escaneo y verificación en vivo
+│   └── fetch_and_verify.js     # Motor automatizado de escaneo y verificación en vivo
 └── README.md                   # Documentación completa
 ```
 
@@ -58,7 +59,7 @@ latino_tv_family/
 ### 1. Guardar y subir los cambios a GitHub
 ```bash
 git add .
-git commit -m "feat: mas de 380 canales verificados por categoria e idioma"
+git commit -m "feat: agregar canales en japones, ingles y espanol (580 verificados)"
 git push origin main
 ```
 
@@ -71,10 +72,12 @@ git push origin main
 ### 3. Obtener tus URLs públicas
 En menos de 10 segundos, Vercel generará el dominio de tu proyecto:
 * **Web Dashboard & Reproductor:** `https://tu-proyecto.vercel.app/`
-* **Lista M3U Completa:** `https://tu-proyecto.vercel.app/canales.m3u`
+* **Lista M3U Completa (580 canales):** `https://tu-proyecto.vercel.app/canales.m3u`
 * **Solo Canales en Español:** `https://tu-proyecto.vercel.app/api/playlist?idioma=es`
-* **Solo Noticias en Español:** `https://tu-proyecto.vercel.app/api/playlist?idioma=es&categoria=Noticias`
+* **Solo Canales en Japonés:** `https://tu-proyecto.vercel.app/api/playlist?idioma=ja`
+* **Solo Canales en Inglés:** `https://tu-proyecto.vercel.app/api/playlist?idioma=en`
 * **Solo Deportes:** `https://tu-proyecto.vercel.app/api/playlist?categoria=Deportes`
+* **Solo Noticias:** `https://tu-proyecto.vercel.app/api/playlist?categoria=Noticias`
 * **Catálogo en formato JSON:** `https://tu-proyecto.vercel.app/api/playlist?format=json`
 
 ---
@@ -82,7 +85,7 @@ En menos de 10 segundos, Vercel generará el dominio de tu proyecto:
 ## 🧪 Pruebas y Validación
 
 1. **En el Navegador:**  
-   Ingresa a `https://tu-proyecto.vercel.app/` para ver la interfaz interactiva, filtrar por idioma/categoría y probar los canales en tiempo real.
+   Ingresa a `https://tu-proyecto.vercel.app/` para ver la interfaz interactiva, filtrar por idioma (`🇪🇸 Español`, `🇬🇧 English`, `🇯🇵 Japonés`) y categoría, y probar cualquier canal con el reproductor HLS.
 2. **En VLC Media Player (PC / Mac):**  
    * Menú **Medio** > **Abrir emisión de red...** (Ctrl + N)
    * Pega `https://tu-proyecto.vercel.app/canales.m3u` y presiona **Reproducir**.
@@ -105,7 +108,7 @@ En menos de 10 segundos, Vercel generará el dominio de tu proyecto:
 
 ## 🔄 Re-verificación y Actualización de Canales
 
-Puedes volver a ejecutar el verificador automatizado en cualquier momento para encontrar canales nuevos o descartar streams que hayan dejado de funcionar:
+Puedes volver a ejecutar el verificador automatizado en cualquier momento:
 ```bash
 node scripts/fetch_and_verify.js
 git commit -am "chore: actualizar canales verificados"

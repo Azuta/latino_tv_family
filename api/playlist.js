@@ -39,7 +39,6 @@ export default function handler(req, res) {
       } else if (line.startsWith('#EXTINF:')) {
         currentExtinf = line;
       } else if (!line.startsWith('#') && currentExtinf) {
-        // Parsear atributos EXTINF
         const idMatch = currentExtinf.match(/tvg-id="([^"]*)"/i);
         const nameMatch = currentExtinf.match(/tvg-name="([^"]*)"/i);
         const logoMatch = currentExtinf.match(/tvg-logo="([^"]*)"/i);
@@ -48,7 +47,13 @@ export default function handler(req, res) {
         const titleMatch = currentExtinf.match(/,(.*)$/);
 
         const groupVal = groupMatch ? groupMatch[1] : 'General';
-        const langVal = langMatch ? langMatch[1] : (groupVal.startsWith('Español') ? 'Español' : (groupVal.startsWith('English') ? 'English' : 'Otro'));
+        let langVal = langMatch ? langMatch[1] : '';
+        if (!langVal) {
+          if (groupVal.toLowerCase().includes('español')) langVal = 'Español';
+          else if (groupVal.toLowerCase().includes('english')) langVal = 'English';
+          else if (groupVal.toLowerCase().includes('japon')) langVal = 'Japonés';
+          else langVal = 'Otro';
+        }
 
         channels.push({
           rawExtinf: currentExtinf,
@@ -75,10 +80,13 @@ export default function handler(req, res) {
 
       if (filterLang) {
         const l = ch.language.toLowerCase();
+        const g = ch.group.toLowerCase();
         if (filterLang === 'es' || filterLang === 'español' || filterLang === 'spanish') {
-          matches = matches && (l.includes('español') || l.includes('spanish') || ch.group.toLowerCase().startsWith('español'));
+          matches = matches && (l.includes('español') || l.includes('spanish') || g.includes('español'));
         } else if (filterLang === 'en' || filterLang === 'english' || filterLang === 'inglés' || filterLang === 'ingles') {
-          matches = matches && (l.includes('english') || ch.group.toLowerCase().startsWith('english'));
+          matches = matches && (l.includes('english') || g.includes('english'));
+        } else if (filterLang === 'ja' || filterLang === 'jp' || filterLang === 'japonés' || filterLang === 'japones' || filterLang === 'japanese') {
+          matches = matches && (l.includes('japon') || l.includes('japan') || g.includes('japon'));
         } else {
           matches = matches && l.includes(filterLang);
         }
