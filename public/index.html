@@ -18,6 +18,7 @@
       --text: #f8fafc;
       --text-muted: #94a3b8;
       --success: #34d399;
+      --warning: #fbbf24;
     }
 
     * {
@@ -36,7 +37,7 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: 0 auto;
     }
 
@@ -72,8 +73,39 @@
     p.subtitle {
       color: var(--text-muted);
       font-size: 1.05rem;
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto;
+    }
+
+    /* List Mode Switcher */
+    .mode-switch-box {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .mode-btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .mode-btn.active {
+      background: #0284c7;
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 15px var(--accent-glow);
     }
 
     /* URL Hero Card */
@@ -158,6 +190,25 @@
       padding: 0.75rem 1rem;
       border-radius: 0.5rem;
       border-left: 3px solid var(--accent);
+    }
+
+    /* Explanation Banner */
+    .info-banner {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid #334155;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      font-size: 1.35rem;
+      line-height: 1;
     }
 
     /* Video Player Section */
@@ -293,11 +344,13 @@
       margin-bottom: 1rem;
       color: var(--text-muted);
       font-size: 0.9rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     .channels-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       gap: 0.9rem;
       margin-bottom: 2rem;
     }
@@ -306,12 +359,13 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 0.75rem;
-      padding: 0.9rem;
+      padding: 0.85rem;
       cursor: pointer;
       transition: all 0.2s ease;
       display: flex;
       align-items: center;
       gap: 0.85rem;
+      position: relative;
     }
 
     .channel-card:hover {
@@ -373,7 +427,23 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 130px;
+      max-width: 120px;
+    }
+
+    .btn-copy-stream {
+      background: transparent;
+      border: none;
+      color: #64748b;
+      cursor: pointer;
+      padding: 0.3rem;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-copy-stream:hover {
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.1);
     }
 
     .pagination-bar {
@@ -436,15 +506,25 @@
 <body>
   <div class="container">
     <header>
-      <div class="badge">✓ 580 Canales Verificados en Vivo</div>
+      <div class="badge">📡 Centro de Distribución IPTV Serverless</div>
       <h1>Latino TV Family</h1>
-      <p class="subtitle">Catálogo IPTV privado con transmisiones HLS punto a punto, verificado en vivo y dividido por idioma y categoría.</p>
+      <p class="subtitle">Catálogo IPTV privado con transmisión directa punto a punto (HLS), organizado por idioma y categoría.</p>
     </header>
+
+    <!-- Switcher de Modo de Lista -->
+    <div class="mode-switch-box">
+      <button class="mode-btn active" id="btn-mode-verified" onclick="switchListMode('verified')">
+        ⭐ Lista Verificada (580 canales 100% estables)
+      </button>
+      <button class="mode-btn" id="btn-mode-all" onclick="switchListMode('all')">
+        🌐 Catálogo Completo GitHub (5,580+ canales totales)
+      </button>
+    </div>
 
     <!-- Hero Card: URL de la Lista -->
     <div class="hero-card">
       <div class="hero-title">
-        <span>ENLACE OFICIAL DE TU LISTA M3U (VERCEL)</span>
+        <span id="list-title-label">ENLACE OFICIAL M3U: LISTA VERIFICADA</span>
         <span id="channel-stats" style="font-size: 0.85rem; color: var(--accent);">Cargando catálogo...</span>
       </div>
       <div class="url-box">
@@ -459,7 +539,16 @@
         </a>
       </div>
       <div class="tip-box">
-        💡 <strong>Tip para Smart TV con control remoto:</strong> Pega este enlace en <a href="https://tinyurl.com" target="_blank" style="color: var(--accent); text-decoration: underline;">tinyurl.com</a> (ej: <code>tinyurl.com/mifamilia-tv</code>) para ingresarlo fácilmente en TiviMate o IPTV Smarters.
+        💡 <strong>Tip para Smart TV:</strong> Pega este enlace en <a href="https://tinyurl.com" target="_blank" style="color: var(--accent); text-decoration: underline;">tinyurl.com</a> para crear un enlace corto y fácil de escribir con el control remoto.
+      </div>
+    </div>
+
+    <!-- Cuadro Informativo de Compatibilidad -->
+    <div class="info-banner">
+      <div class="info-icon">ℹ️</div>
+      <div>
+        <strong>¿Por qué algunos canales pueden no verse en el navegador web?</strong><br>
+        Los navegadores de computadora bloquean señales que no tienen cabeceras CORS abiertas o que usan codecs de audio como AC3 o video MPEG-2. <strong>En Smart TV (TiviMate, IPTV Smarters) y en VLC en PC/móvil no existe esta limitación y los 580 canales se reproducen directamente de forma nativa.</strong>
       </div>
     </div>
 
@@ -497,10 +586,10 @@
           <button class="chip active" onclick="setCategoryFilter('all', this)">Todas</button>
           <button class="chip" onclick="setCategoryFilter('Noticias', this)">Noticias</button>
           <button class="chip" onclick="setCategoryFilter('Deportes', this)">Deportes</button>
-          <button class="chip" onclick="setCategoryFilter('Cine y Series', this)">Cine y Series</button>
-          <button class="chip" onclick="setCategoryFilter('Infantil y Familia', this)">Infantil y Familia</button>
+          <button class="chip" onclick="setCategoryFilter('Cine', this)">Cine & Series</button>
+          <button class="chip" onclick="setCategoryFilter('Infantil', this)">Infantil & Familia</button>
           <button class="chip" onclick="setCategoryFilter('Entretenimiento', this)">Entretenimiento</button>
-          <button class="chip" onclick="setCategoryFilter('Cultura y Documentales', this)">Cultura y Doc</button>
+          <button class="chip" onclick="setCategoryFilter('Cultura', this)">Cultura & Doc</button>
           <button class="chip" onclick="setCategoryFilter('Música', this)">Música</button>
         </div>
       </div>
@@ -508,13 +597,13 @@
       <!-- Buscador -->
       <div class="filter-row">
         <span class="filter-label">Buscar:</span>
-        <input type="text" id="search-box" class="search-input" placeholder="Buscar por nombre, país o temática..." oninput="handleSearch()">
+        <input type="text" id="search-box" class="search-input" placeholder="Buscar por canal, país o temática..." oninput="handleSearch()">
       </div>
     </div>
 
     <!-- Cabecera de Canales Filtrados -->
     <div class="channels-header">
-      <span id="filtered-stats">Mostrando canales...</span>
+      <span id="filtered-stats">Cargando canales...</span>
       <span style="font-size: 0.8rem; color: var(--text-muted);">Haz clic en cualquier tarjeta para reproducir</span>
     </div>
 
@@ -540,7 +629,7 @@
           <li>Instala TiviMate desde Google Play o la tienda de Amazon.</li>
           <li>Selecciona <em>Añadir lista de reproducción</em> &gt; <em>Lista M3U</em>.</li>
           <li>Pega tu URL de Vercel o tu enlace corto de TinyURL.</li>
-          <li>¡Los canales aparecerán divididos automáticamente por idioma y categoría!</li>
+          <li>¡Los canales aparecerán divididos automáticamente por carpetas e idioma!</li>
         </ol>
       </div>
 
@@ -572,19 +661,36 @@
   </div>
 
   <script>
+    let currentListMode = 'verified'; // 'verified' o 'all'
     let allChannels = [];
     let filteredChannels = [];
     let activeLanguage = 'all';
     let activeCategory = 'all';
     let searchQuery = '';
-    let displayedCount = 48;
-    const PAGE_SIZE = 48;
+    let displayedCount = 60;
+    const PAGE_SIZE = 60;
 
     const video = document.getElementById('video-player');
     let hls = null;
 
-    const playlistUrl = `${window.location.origin}/canales.m3u`;
-    document.getElementById('m3u-url').value = playlistUrl;
+    function updateUrlDisplay() {
+      const fileName = currentListMode === 'all' ? 'canales-todos.m3u' : 'canales.m3u';
+      const fullUrl = `${window.location.origin}/${fileName}`;
+      document.getElementById('m3u-url').value = fullUrl;
+      document.getElementById('download-btn').href = `/${fileName}`;
+      document.getElementById('download-btn').setAttribute('download', fileName);
+      document.getElementById('list-title-label').textContent = currentListMode === 'all' 
+        ? 'ENLACE OFICIAL M3U: CATÁLOGO COMPLETO GITHUB (+5,580 CANALES)' 
+        : 'ENLACE OFICIAL M3U: LISTA VERIFICADA (580 CANALES 100% ESTABLES)';
+    }
+
+    function switchListMode(mode) {
+      currentListMode = mode;
+      document.getElementById('btn-mode-verified').classList.toggle('active', mode === 'verified');
+      document.getElementById('btn-mode-all').classList.toggle('active', mode === 'all');
+      updateUrlDisplay();
+      loadChannels();
+    }
 
     function copyPlaylistUrl() {
       const input = document.getElementById('m3u-url');
@@ -599,8 +705,11 @@
     }
 
     async function loadChannels() {
+      document.getElementById('channel-stats').textContent = 'Cargando canales...';
+      const fileName = currentListMode === 'all' ? 'canales-todos.m3u' : 'canales.m3u';
+
       try {
-        const response = await fetch('/canales.m3u');
+        const response = await fetch(`/${fileName}`);
         const text = await response.text();
         const lines = text.split(/\r?\n/);
         allChannels = [];
@@ -622,7 +731,7 @@
             if (!lang) {
               if (group.includes('Español')) lang = 'Español';
               else if (group.includes('English')) lang = 'English';
-              else if (group.includes('Japonés') || group.includes('Japanese')) lang = 'Japonés';
+              else if (group.includes('Japonés') || group.includes('Japanese') || group.includes('Japan')) lang = 'Japonés';
               else lang = 'Otro';
             }
             if (lang === 'Japanese') lang = 'Japonés';
@@ -650,7 +759,7 @@
         document.getElementById('count-es').textContent = countEs;
         document.getElementById('count-en').textContent = countEn;
         document.getElementById('count-ja').textContent = countJa;
-        document.getElementById('channel-stats').textContent = `${allChannels.length} canales activos (${countEs} Español, ${countEn} English, ${countJa} Japonés)`;
+        document.getElementById('channel-stats').textContent = `${allChannels.length} canales (${countEs} Español, ${countEn} English, ${countJa} Japonés)`;
 
         applyFilters();
 
@@ -680,7 +789,7 @@
       const container = document.getElementById('channels-container');
       container.innerHTML = '';
 
-      document.getElementById('filtered-stats').textContent = `Mostrando ${Math.min(displayedCount, filteredChannels.length)} de ${filteredChannels.length} canales encontrados`;
+      document.getElementById('filtered-stats').textContent = `Mostrando ${Math.min(displayedCount, filteredChannels.length)} de ${filteredChannels.length} canales`;
 
       const visible = filteredChannels.slice(0, displayedCount);
 
@@ -711,6 +820,9 @@
               <span class="pill-cat">${ch.category}</span>
             </div>
           </div>
+          <button class="btn-copy-stream" title="Copiar URL directa del stream" onclick="event.stopPropagation(); copyStreamUrl('${ch.url}')">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+          </button>
         `;
         container.appendChild(card);
       });
@@ -720,6 +832,12 @@
       } else {
         document.getElementById('load-more-container').style.display = 'none';
       }
+    }
+
+    function copyStreamUrl(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Enlace del canal copiado al portapapeles:\n' + url);
+      });
     }
 
     function loadMoreChannels() {
@@ -750,7 +868,7 @@
         });
         hls.on(Hls.Events.ERROR, (event, data) => {
           if (data.fatal) {
-            document.getElementById('stream-status').textContent = 'Aviso: Formato no soportado por este navegador (disponible en TiviMate / VLC)';
+            document.getElementById('stream-status').textContent = '⚠️ Restricción de navegador (CORS/Codec) — Este canal funciona en Smart TV / VLC';
           }
         });
       } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
@@ -781,6 +899,7 @@
       applyFilters();
     }
 
+    updateUrlDisplay();
     loadChannels();
   </script>
 </body>

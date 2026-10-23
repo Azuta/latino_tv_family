@@ -12,10 +12,11 @@ export default function handler(req, res) {
   }
 
   try {
-    const filePath = path.join(process.cwd(), 'public', 'canales.m3u');
-    const content = fs.readFileSync(filePath, 'utf-8');
+    const { pais, categoria, category, group, search, q, idioma, lang, language, format, todos, all } = req.query;
 
-    const { pais, categoria, category, group, search, q, idioma, lang, language, format } = req.query;
+    const fileName = (todos === 'true' || all === 'true') ? 'canales-todos.m3u' : 'canales.m3u';
+    const filePath = path.join(process.cwd(), 'public', fileName);
+    const content = fs.readFileSync(filePath, 'utf-8');
 
     // Si no hay filtros y no se pide JSON, devolver el archivo original rápidamente
     if (!pais && !categoria && !category && !group && !search && !q && !idioma && !lang && !language && format !== 'json') {
