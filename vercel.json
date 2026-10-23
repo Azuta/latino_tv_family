@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,HEAD" },
+        { "key": "Access-Control-Allow-Headers", "value": "Range,Content-Type,Accept,Origin,User-Agent" }
+      ]
+    },
+    {
+      "source": "/canales.m3u",
+      "headers": [
+        { "key": "Content-Type", "value": "application/x-mpegURL; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=600" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.m3u",
+      "headers": [
+        { "key": "Content-Type", "value": "application/x-mpegURL; charset=utf-8" }
+      ]
+    }
+  ]
+}

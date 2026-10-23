@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latino TV Family - Tu Lista IPTV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #131b2e;
+      --card-border: #1e293b;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.25);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --success: #34d399;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #131b2e 0%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* URL Hero Card */
+    .hero-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .url-box {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .url-input {
+      flex: 1;
+      min-width: 260px;
+      background: #0b1120;
+      border: 1px solid #334155;
+      color: var(--accent);
+      padding: 0.85rem 1rem;
+      border-radius: 0.5rem;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #0369a1;
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      background: #1e293b;
+      color: var(--text);
+      border: 1px solid #334155;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background: #334155;
+    }
+
+    .tip-box {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.6);
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* Video Player Section */
+    .player-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .player-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .now-playing {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+    }
+
+    .live-dot {
+      width: 10px;
+      height: 10px;
+      background: #ef4444;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.9); }
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #1e293b;
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Filter Bar & Channels */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-chips {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .chip.active, .chip:hover {
+      background: var(--accent);
+      color: #0b1120;
+      font-weight: 600;
+      border-color: var(--accent);
+    }
+
+    .search-input {
+      background: #131b2e;
+      border: 1px solid #334155;
+      color: #fff;
+      padding: 0.45rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      outline: none;
+      min-width: 220px;
+    }
+
+    .channels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .channel-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .channel-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 4px 15px rgba(56, 189, 248, 0.1);
+    }
+
+    .channel-card.active {
+      border-color: var(--accent);
+      background: #19243d;
+    }
+
+    .channel-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      background: #0f172a;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+      border: 1px solid #334155;
+      flex-shrink: 0;
+    }
+
+    .channel-info {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .channel-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .channel-group {
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* Device Setup Section */
+    .devices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .device-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+
+    .device-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .device-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .step-list {
+      list-style-type: decimal;
+      padding-left: 1.25rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .step-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">📡 Servidor Serverless IPTV Activo</div>
+      <h1>Latino TV Family</h1>
+      <p class="subtitle">Lista privada M3U de alta disponibilidad alojada en Vercel con reproducción directa punto a punto (HLS).</p>
+    </header>
+
+    <!-- Hero Card: URL de la Lista -->
+    <div class="hero-card">
+      <div class="hero-title">
+        <span>ENLACE OFICIAL DE TU LISTA M3U</span>
+        <span id="channel-count" style="font-size: 0.8rem; color: var(--accent);">Cargando canales...</span>
+      </div>
+      <div class="url-box">
+        <input type="text" id="m3u-url" class="url-input" readonly value="">
+        <button class="btn btn-primary" onclick="copyPlaylistUrl()">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+          <span id="copy-btn-text">Copiar Lista</span>
+        </button>
+        <a id="download-btn" href="/canales.m3u" download="canales.m3u" class="btn btn-secondary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Descargar .m3u
+        </a>
+      </div>
+      <div class="tip-box">
+        💡 <strong>Tip para Smart TV con control remoto:</strong> Para evitar escribir la URL completa en el televisor, puedes acortarla gratis en <a href="https://tinyurl.com" target="_blank" style="color: var(--accent); text-decoration: underline;">tinyurl.com</a> (por ejemplo: <code>tinyurl.com/mifamilia-tv</code>).
+      </div>
+    </div>
+
+    <!-- Reproductor Web de Prueba -->
+    <div class="player-section">
+      <div class="player-header">
+        <div class="now-playing">
+          <span class="live-dot"></span>
+          <span id="current-channel-title">Haz clic en un canal para probar la transmisión</span>
+        </div>
+        <span id="stream-status" style="font-size: 0.85rem; color: var(--text-muted);">HLS Web Player</span>
+      </div>
+      <div class="video-wrapper">
+        <video id="video-player" controls autoplay muted playsinline></video>
+      </div>
+    </div>
+
+    <!-- Controles y Canales -->
+    <div class="controls-bar">
+      <div class="filter-chips" id="filter-chips">
+        <button class="chip active" onclick="filterCategory('all', this)">Todos</button>
+        <button class="chip" onclick="filterCategory('Noticias', this)">Noticias</button>
+        <button class="chip" onclick="filterCategory('Deportes', this)">Deportes</button>
+      </div>
+      <input type="text" id="search-box" class="search-input" placeholder="Buscar canal..." oninput="handleSearch()">
+    </div>
+
+    <!-- Grilla de Canales -->
+    <div class="channels-grid" id="channels-container"></div>
+
+    <!-- Guía de Configuración en Dispositivos -->
+    <h2 style="font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.5rem;">Configuración en tus dispositivos</h2>
+    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Usa el enlace copiado en cualquiera de estas aplicaciones recomendadas:</p>
+    
+    <div class="devices-grid">
+      <div class="device-card">
+        <div class="device-title">📺 Android TV / Fire Stick</div>
+        <div class="device-desc"><strong>App: TiviMate IPTV Player</strong> (La mejor experiencia de TV).</div>
+        <ol class="step-list">
+          <li>Instala TiviMate desde Google Play o la tienda de Amazon.</li>
+          <li>Selecciona <em>Añadir lista de reproducción</em> &gt; <em>Lista M3U</em>.</li>
+          <li>Pega tu URL de Vercel o tu enlace corto de TinyURL.</li>
+          <li>¡Listo! Los canales se ordenarán automáticamente por categoría.</li>
+        </ol>
+      </div>
+
+      <div class="device-card">
+        <div class="device-title">📺 Smart TV Samsung / LG</div>
+        <div class="device-desc"><strong>App: IPTV Smarters Pro / SS IPTV</strong>.</div>
+        <ol class="step-list">
+          <li>Instala IPTV Smarters desde la tienda oficial de Samsung o LG.</li>
+          <li>Elige <em>Add User</em> &gt; <em>Load Your Playlist or File/URL</em>.</li>
+          <li>Asigna un nombre (ej. "Familia") y pega la URL de la lista.</li>
+          <li>Presiona <em>Add User</em> y reproduce al instante.</li>
+        </ol>
+      </div>
+
+      <div class="device-card">
+        <div class="device-title">📱 Celular & PC (Android / iOS / VLC)</div>
+        <div class="device-desc"><strong>App: IPTV Smarters Lite, Televizo o VLC</strong>.</div>
+        <ol class="step-list">
+          <li><strong>En VLC:</strong> Menú <em>Medio</em> &gt; <em>Abrir emisión de red...</em> &gt; Pega la URL.</li>
+          <li><strong>En Móvil:</strong> Abre Televizo o IPTV Smarters y pulsa <em>+ Añadir lista M3U</em>.</li>
+          <li>Cualquier cambio que hagas en GitHub se sincronizará automáticamente.</li>
+        </ol>
+      </div>
+    </div>
+
+    <footer>
+      Latino TV Family &bull; Arquitectura IPTV Serverless con CDN directa &bull; Vercel + GitHub
+    </footer>
+  </div>
+
+  <script>
+    let allChannels = [];
+    let activeCategory = 'all';
+    let searchQuery = '';
+    const video = document.getElementById('video-player');
+    let hls = null;
+
+    // Inicializar URL
+    const playlistUrl = `${window.location.origin}/canales.m3u`;
+    document.getElementById('m3u-url').value = playlistUrl;
+
+    function copyPlaylistUrl() {
+      const input = document.getElementById('m3u-url');
+      navigator.clipboard.writeText(input.value).then(() => {
+        const btnText = document.getElementById('copy-btn-text');
+        const oldText = btnText.textContent;
+        btnText.textContent = '¡Copiado!';
+        setTimeout(() => {
+          btnText.textContent = oldText;
+        }, 2000);
+      });
+    }
+
+    // Cargar y parsear canales.m3u
+    async function loadChannels() {
+      try {
+        const response = await fetch('/canales.m3u');
+        const text = await response.text();
+        const lines = text.split(/\r?\n/);
+        allChannels = [];
+        let currentExtinf = null;
+
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if (line.startsWith('#EXTINF:')) {
+            currentExtinf = line;
+          } else if (!line.startsWith('#') && line.length > 5 && currentExtinf) {
+            const nameMatch = currentExtinf.match(/tvg-name="([^"]*)"/i);
+            const logoMatch = currentExtinf.match(/tvg-logo="([^"]*)"/i);
+            const groupMatch = currentExtinf.match(/group-title="([^"]*)"/i);
+            const titleMatch = currentExtinf.match(/,(.*)$/);
+
+            allChannels.push({
+              name: nameMatch ? nameMatch[1] : (titleMatch ? titleMatch[1] : 'Canal'),
+              logo: logoMatch ? logoMatch[1] : '',
+              group: groupMatch ? groupMatch[1] : 'General',
+              title: titleMatch ? titleMatch[1] : '',
+              url: line
+            });
+            currentExtinf = null;
+          }
+        }
+
+        document.getElementById('channel-count').textContent = `${allChannels.length} canales activos`;
+        renderChannels();
+
+        // Reproducir primer canal por defecto si existe
+        if (allChannels.length > 0) {
+          playChannel(allChannels[0], 0);
+        }
+      } catch (err) {
+        console.error('Error al cargar la playlist:', err);
+        document.getElementById('channel-count').textContent = 'Error al cargar lista';
+      }
+    }
+
+    function renderChannels() {
+      const container = document.getElementById('channels-container');
+      container.innerHTML = '';
+
+      const filtered = allChannels.filter(ch => {
+        const matchCategory = (activeCategory === 'all') || (ch.group.toLowerCase() === activeCategory.toLowerCase());
+        const matchSearch = ch.title.toLowerCase().includes(searchQuery.toLowerCase()) || ch.name.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchCategory && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">No se encontraron canales.</p>';
+        return;
+      }
+
+      filtered.forEach((ch, idx) => {
+        const card = document.createElement('div');
+        card.className = 'channel-card';
+        card.onclick = () => playChannel(ch, idx);
+
+        const logoSrc = ch.logo || 'https://via.placeholder.com/48/1e293b/38bdf8?text=TV';
+        card.innerHTML = `
+          <img class="channel-logo" src="${logoSrc}" alt="${ch.name}" onerror="this.src='https://via.placeholder.com/48/1e293b/38bdf8?text=TV'">
+          <div class="channel-info">
+            <div class="channel-name" title="${ch.title}">${ch.title || ch.name}</div>
+            <div class="channel-group">${ch.group}</div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function playChannel(ch, index) {
+      document.getElementById('current-channel-title').textContent = `${ch.title || ch.name} (${ch.group})`;
+      document.getElementById('stream-status').textContent = 'Cargando stream...';
+
+      // Resaltar tarjeta activa
+      const cards = document.querySelectorAll('.channel-card');
+      cards.forEach((c, i) => {
+        if (i === index) c.classList.add('active');
+        else c.classList.remove('active');
+      });
+
+      if (Hls.isSupported()) {
+        if (hls) {
+          hls.destroy();
+        }
+        hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true,
+        });
+        hls.loadSource(ch.url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          video.play().catch(() => {});
+          document.getElementById('stream-status').textContent = 'En vivo';
+        });
+        hls.on(Hls.Events.ERROR, (event, data) => {
+          if (data.fatal) {
+            document.getElementById('stream-status').textContent = 'Aviso: Stream con restricción de origen o geobloqueo';
+          }
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        // Soporte nativo Safari
+        video.src = ch.url;
+        video.addEventListener('loadedmetadata', () => {
+          video.play().catch(() => {});
+          document.getElementById('stream-status').textContent = 'En vivo';
+        });
+      }
+    }
+
+    function filterCategory(category, chipElement) {
+      activeCategory = category;
+      document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+      chipElement.classList.add('active');
+      renderChannels();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('search-box').value.trim();
+      renderChannels();
+    }
+
+    loadChannels();
+  </script>
+</body>
+</html>

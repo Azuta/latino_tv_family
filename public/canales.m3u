@@ -1,0 +1,31 @@
+#EXTM3U x-tvg-url="https://iptv-org.github.io/epg/guides/es/movistar.es.epg.xml"
+
+# ============================================================
+# CANALES DE NOTICIAS
+# ============================================================
+#EXTINF:-1 tvg-id="RTVE_24H" tvg-name="RTVE 24h" tvg-logo="https://i.imgur.com/8QZqZ8Z.png" group-title="Noticias",RTVE 24h Noticias (España)
+https://rtvelivestream.rtve.es/rtvesec/24h/24h_main_dvr.m3u8
+
+#EXTINF:-1 tvg-id="DW_ES" tvg-name="DW Español" tvg-logo="https://i.imgur.com/gK99K9g.png" group-title="Noticias",DW Español (Alemania / Internacional)
+https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8
+
+#EXTINF:-1 tvg-id="France24_ES" tvg-name="France 24 Español" tvg-logo="https://i.imgur.com/jXqW5Kx.png" group-title="Noticias",France 24 Español
+https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8
+
+#EXTINF:-1 tvg-id="Euronews_ES" tvg-name="Euronews Español" tvg-logo="https://i.imgur.com/8t9mdg9.png" group-title="Noticias",Euronews Español
+https://iptv.bitred.cl/euronews/index.m3u8
+
+#EXTINF:-1 tvg-id="Canal26_AR" tvg-name="Canal 26" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Canal_26_logo_%282022%29.svg/500px-Canal_26_logo_%282022%29.svg.png" group-title="Noticias",Canal 26 (Argentina)
+https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8
+
+#EXTINF:-1 tvg-id="ADN40_MX" tvg-name="ADN 40" tvg-logo="https://i.imgur.com/Og17U9N.png" group-title="Noticias",ADN 40 (México)
+https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
+
+#EXTINF:-1 tvg-id="TeleSUR_HD" tvg-name="TeleSUR" tvg-logo="https://i.imgur.com/P50VjRX.png" group-title="Noticias",TeleSUR HD
+https://mblesmain01.telesur.ultrabase.net/mbliveMain/hd/playlist.m3u8
+
+# ============================================================
+# CANALES DE DEPORTES
+# ============================================================
+#EXTINF:-1 tvg-id="RedBullTV" tvg-name="Red Bull TV" tvg-logo="https://i.imgur.com/lM33aAa.png" group-title="Deportes",Red Bull TV (Acción & Deportes Extremos)
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
