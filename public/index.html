@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Latino TV Family - Tu Lista IPTV</title>
+  <title>Latino TV Family - Tu Lista IPTV Verificada</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,13 +36,13 @@
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
     header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .badge {
@@ -50,13 +50,13 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.35rem 0.85rem;
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: var(--accent);
+      background: rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      color: var(--success);
       border-radius: 9999px;
       font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     h1 {
@@ -71,8 +71,8 @@
 
     p.subtitle {
       color: var(--text-muted);
-      font-size: 1.1rem;
-      max-width: 600px;
+      font-size: 1.05rem;
+      max-width: 650px;
       margin: 0 auto;
     }
 
@@ -81,19 +81,21 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 1rem;
-      padding: 1.75rem;
+      padding: 1.5rem;
       margin-bottom: 2rem;
       box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
     .hero-title {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--text-muted);
       margin-bottom: 0.75rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     .url-box {
@@ -118,7 +120,7 @@
       cursor: pointer;
       font-weight: 600;
       font-size: 0.95rem;
-      padding: 0.85rem 1.5rem;
+      padding: 0.85rem 1.4rem;
       border-radius: 0.5rem;
       border: none;
       display: inline-flex;
@@ -181,6 +183,7 @@
       align-items: center;
       gap: 0.75rem;
       font-weight: 600;
+      font-size: 1.05rem;
     }
 
     .live-dot {
@@ -213,29 +216,48 @@
       height: 100%;
     }
 
-    /* Filter Bar & Channels */
-    .controls-bar {
+    /* Filters Section */
+    .filter-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
       gap: 1rem;
-      margin-bottom: 1.25rem;
+    }
+
+    .filter-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       flex-wrap: wrap;
     }
 
-    .filter-chips {
+    .filter-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      min-width: 75px;
+    }
+
+    .chips-group {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.4rem;
       flex-wrap: wrap;
+      flex: 1;
     }
 
     .chip {
       background: #1e293b;
       border: 1px solid #334155;
       color: var(--text-muted);
-      padding: 0.4rem 0.9rem;
+      padding: 0.35rem 0.85rem;
       border-radius: 9999px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -248,33 +270,48 @@
     }
 
     .search-input {
-      background: #131b2e;
+      flex: 1;
+      min-width: 250px;
+      background: #0b1120;
       border: 1px solid #334155;
       color: #fff;
-      padding: 0.45rem 1rem;
-      border-radius: 9999px;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
       font-size: 0.9rem;
       outline: none;
-      min-width: 220px;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+
+    /* Grilla de Canales */
+    .channels-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
     }
 
     .channels-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1rem;
-      margin-bottom: 3rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 2rem;
     }
 
     .channel-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 0.75rem;
-      padding: 1rem;
+      padding: 0.9rem;
       cursor: pointer;
       transition: all 0.2s ease;
       display: flex;
       align-items: center;
-      gap: 0.9rem;
+      gap: 0.85rem;
     }
 
     .channel-card:hover {
@@ -289,12 +326,12 @@
     }
 
     .channel-logo {
-      width: 48px;
-      height: 48px;
+      width: 46px;
+      height: 46px;
       object-fit: contain;
-      background: #0f172a;
+      background: #0b1120;
       border-radius: 0.5rem;
-      padding: 0.25rem;
+      padding: 0.2rem;
       border: 1px solid #334155;
       flex-shrink: 0;
     }
@@ -306,21 +343,48 @@
 
     .channel-name {
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      color: #f1f5f9;
     }
 
-    .channel-group {
-      font-size: 0.75rem;
+    .channel-meta {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+      font-size: 0.72rem;
+    }
+
+    .pill-lang {
+      background: rgba(56, 189, 248, 0.15);
       color: var(--accent);
-      text-transform: uppercase;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
       font-weight: 600;
-      letter-spacing: 0.05em;
     }
 
-    /* Device Setup Section */
+    .pill-cat {
+      background: #1e293b;
+      color: #94a3b8;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 130px;
+    }
+
+    .pagination-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Devices */
     .devices-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -372,16 +436,16 @@
 <body>
   <div class="container">
     <header>
-      <div class="badge">📡 Servidor Serverless IPTV Activo</div>
+      <div class="badge">✓ 380+ Canales Verificados en Vivo</div>
       <h1>Latino TV Family</h1>
-      <p class="subtitle">Lista privada M3U de alta disponibilidad alojada en Vercel con reproducción directa punto a punto (HLS).</p>
+      <p class="subtitle">Catálogo IPTV privado con transmisiones HLS punto a punto, verificado automáticamente y dividido por idioma y categoría.</p>
     </header>
 
     <!-- Hero Card: URL de la Lista -->
     <div class="hero-card">
       <div class="hero-title">
-        <span>ENLACE OFICIAL DE TU LISTA M3U</span>
-        <span id="channel-count" style="font-size: 0.8rem; color: var(--accent);">Cargando canales...</span>
+        <span>ENLACE OFICIAL DE TU LISTA M3U (VERCEL)</span>
+        <span id="channel-stats" style="font-size: 0.85rem; color: var(--accent);">Cargando catálogo...</span>
       </div>
       <div class="url-box">
         <input type="text" id="m3u-url" class="url-input" readonly value="">
@@ -395,7 +459,7 @@
         </a>
       </div>
       <div class="tip-box">
-        💡 <strong>Tip para Smart TV con control remoto:</strong> Para evitar escribir la URL completa en el televisor, puedes acortarla gratis en <a href="https://tinyurl.com" target="_blank" style="color: var(--accent); text-decoration: underline;">tinyurl.com</a> (por ejemplo: <code>tinyurl.com/mifamilia-tv</code>).
+        💡 <strong>Tip para Smart TV con control remoto:</strong> Pega este enlace en <a href="https://tinyurl.com" target="_blank" style="color: var(--accent); text-decoration: underline;">tinyurl.com</a> (ej: <code>tinyurl.com/mifamilia-tv</code>) para ingresarlo fácilmente en TiviMate o IPTV Smarters.
       </div>
     </div>
 
@@ -404,7 +468,7 @@
       <div class="player-header">
         <div class="now-playing">
           <span class="live-dot"></span>
-          <span id="current-channel-title">Haz clic en un canal para probar la transmisión</span>
+          <span id="current-channel-title">Haz clic en cualquier canal para ver la señal en vivo</span>
         </div>
         <span id="stream-status" style="font-size: 0.85rem; color: var(--text-muted);">HLS Web Player</span>
       </div>
@@ -413,70 +477,112 @@
       </div>
     </div>
 
-    <!-- Controles y Canales -->
-    <div class="controls-bar">
-      <div class="filter-chips" id="filter-chips">
-        <button class="chip active" onclick="filterCategory('all', this)">Todos</button>
-        <button class="chip" onclick="filterCategory('Noticias', this)">Noticias</button>
-        <button class="chip" onclick="filterCategory('Deportes', this)">Deportes</button>
+    <!-- Panel de Filtros por Idioma y Categoría -->
+    <div class="filter-panel">
+      <!-- Filtro de Idioma -->
+      <div class="filter-row">
+        <span class="filter-label">Idioma:</span>
+        <div class="chips-group" id="lang-chips">
+          <button class="chip active" onclick="setLanguageFilter('all', this)">Todos (<span id="count-all">0</span>)</button>
+          <button class="chip" onclick="setLanguageFilter('Español', this)">🇪🇸 Español (<span id="count-es">0</span>)</button>
+          <button class="chip" onclick="setLanguageFilter('English', this)">🇬🇧 English (<span id="count-en">0</span>)</button>
+        </div>
       </div>
-      <input type="text" id="search-box" class="search-input" placeholder="Buscar canal..." oninput="handleSearch()">
+
+      <!-- Filtro de Categoría -->
+      <div class="filter-row">
+        <span class="filter-label">Categoría:</span>
+        <div class="chips-group" id="category-chips">
+          <button class="chip active" onclick="setCategoryFilter('all', this)">Todas</button>
+          <button class="chip" onclick="setCategoryFilter('Noticias', this)">Noticias</button>
+          <button class="chip" onclick="setCategoryFilter('Deportes', this)">Deportes</button>
+          <button class="chip" onclick="setCategoryFilter('Cine y Series', this)">Cine y Series</button>
+          <button class="chip" onclick="setCategoryFilter('Infantil y Familia', this)">Infantil y Familia</button>
+          <button class="chip" onclick="setCategoryFilter('Entretenimiento', this)">Entretenimiento</button>
+          <button class="chip" onclick="setCategoryFilter('Cultura y Documentales', this)">Cultura y Doc</button>
+          <button class="chip" onclick="setCategoryFilter('Música', this)">Música</button>
+        </div>
+      </div>
+
+      <!-- Buscador -->
+      <div class="filter-row">
+        <span class="filter-label">Buscar:</span>
+        <input type="text" id="search-box" class="search-input" placeholder="Buscar por nombre, país o temática..." oninput="handleSearch()">
+      </div>
+    </div>
+
+    <!-- Cabecera de Canales Filtrados -->
+    <div class="channels-header">
+      <span id="filtered-stats">Mostrando canales...</span>
+      <span style="font-size: 0.8rem; color: var(--text-muted);">Haz clic en cualquier tarjeta para reproducir</span>
     </div>
 
     <!-- Grilla de Canales -->
     <div class="channels-grid" id="channels-container"></div>
 
+    <!-- Paginación / Cargar Más -->
+    <div class="pagination-bar" id="load-more-container">
+      <button class="btn btn-secondary" id="load-more-btn" onclick="loadMoreChannels()">
+        Cargar más canales
+      </button>
+    </div>
+
     <!-- Guía de Configuración en Dispositivos -->
-    <h2 style="font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.5rem;">Configuración en tus dispositivos</h2>
-    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Usa el enlace copiado en cualquiera de estas aplicaciones recomendadas:</p>
+    <h2 style="font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.5rem;">Configuración en tus televisores y dispositivos</h2>
+    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Usa el enlace oficial en cualquiera de estas aplicaciones recomendadas:</p>
     
     <div class="devices-grid">
       <div class="device-card">
         <div class="device-title">📺 Android TV / Fire Stick</div>
-        <div class="device-desc"><strong>App: TiviMate IPTV Player</strong> (La mejor experiencia de TV).</div>
+        <div class="device-desc"><strong>App recomendada: TiviMate IPTV Player</strong></div>
         <ol class="step-list">
           <li>Instala TiviMate desde Google Play o la tienda de Amazon.</li>
           <li>Selecciona <em>Añadir lista de reproducción</em> &gt; <em>Lista M3U</em>.</li>
           <li>Pega tu URL de Vercel o tu enlace corto de TinyURL.</li>
-          <li>¡Listo! Los canales se ordenarán automáticamente por categoría.</li>
+          <li>¡Los canales aparecerán divididos automáticamente por carpetas e idioma!</li>
         </ol>
       </div>
 
       <div class="device-card">
         <div class="device-title">📺 Smart TV Samsung / LG</div>
-        <div class="device-desc"><strong>App: IPTV Smarters Pro / SS IPTV</strong>.</div>
+        <div class="device-desc"><strong>App recomendada: IPTV Smarters Pro</strong></div>
         <ol class="step-list">
-          <li>Instala IPTV Smarters desde la tienda oficial de Samsung o LG.</li>
+          <li>Instala IPTV Smarters desde la tienda oficial de tu Smart TV.</li>
           <li>Elige <em>Add User</em> &gt; <em>Load Your Playlist or File/URL</em>.</li>
-          <li>Asigna un nombre (ej. "Familia") y pega la URL de la lista.</li>
-          <li>Presiona <em>Add User</em> y reproduce al instante.</li>
+          <li>Escribe un nombre (ej. "Familia") y pega la URL de la lista.</li>
+          <li>Pulsa <em>Add User</em> para comenzar a reproducir.</li>
         </ol>
       </div>
 
       <div class="device-card">
-        <div class="device-title">📱 Celular & PC (Android / iOS / VLC)</div>
-        <div class="device-desc"><strong>App: IPTV Smarters Lite, Televizo o VLC</strong>.</div>
+        <div class="device-title">📱 Celular & PC (iOS / Android / VLC)</div>
+        <div class="device-desc"><strong>App: Televizo, IPTV Smarters Lite o VLC</strong></div>
         <ol class="step-list">
           <li><strong>En VLC:</strong> Menú <em>Medio</em> &gt; <em>Abrir emisión de red...</em> &gt; Pega la URL.</li>
-          <li><strong>En Móvil:</strong> Abre Televizo o IPTV Smarters y pulsa <em>+ Añadir lista M3U</em>.</li>
-          <li>Cualquier cambio que hagas en GitHub se sincronizará automáticamente.</li>
+          <li><strong>En Móvil:</strong> Abre Televizo o Smarters Lite y pega el enlace M3U.</li>
+          <li>Cualquier actualización en GitHub se sincroniza automáticamente.</li>
         </ol>
       </div>
     </div>
 
     <footer>
-      Latino TV Family &bull; Arquitectura IPTV Serverless con CDN directa &bull; Vercel + GitHub
+      Latino TV Family &bull; Catálogo IPTV Serverless Verificado &bull; Alojado en Vercel
     </footer>
   </div>
 
   <script>
     let allChannels = [];
+    let filteredChannels = [];
+    let activeLanguage = 'all';
     let activeCategory = 'all';
     let searchQuery = '';
+    let displayedCount = 48;
+    const PAGE_SIZE = 48;
+
     const video = document.getElementById('video-player');
     let hls = null;
 
-    // Inicializar URL
+    // Configurar URL pública
     const playlistUrl = `${window.location.origin}/canales.m3u`;
     document.getElementById('m3u-url').value = playlistUrl;
 
@@ -509,12 +615,20 @@
             const nameMatch = currentExtinf.match(/tvg-name="([^"]*)"/i);
             const logoMatch = currentExtinf.match(/tvg-logo="([^"]*)"/i);
             const groupMatch = currentExtinf.match(/group-title="([^"]*)"/i);
+            const langMatch = currentExtinf.match(/tvg-language="([^"]*)"/i);
             const titleMatch = currentExtinf.match(/,(.*)$/);
+
+            const group = groupMatch ? groupMatch[1] : 'General';
+            // Separar idioma y categoría a partir de "Idioma: Categoria"
+            let lang = langMatch ? langMatch[1] : (group.includes('Español') ? 'Español' : 'English');
+            let cat = group.includes(':') ? group.split(':')[1].trim() : group;
 
             allChannels.push({
               name: nameMatch ? nameMatch[1] : (titleMatch ? titleMatch[1] : 'Canal'),
               logo: logoMatch ? logoMatch[1] : '',
-              group: groupMatch ? groupMatch[1] : 'General',
+              group: group,
+              category: cat,
+              language: lang,
               title: titleMatch ? titleMatch[1] : '',
               url: line
             });
@@ -522,61 +636,92 @@
           }
         }
 
-        document.getElementById('channel-count').textContent = `${allChannels.length} canales activos`;
-        renderChannels();
+        // Estadísticas de idioma
+        const countEs = allChannels.filter(c => c.language === 'Español').length;
+        const countEn = allChannels.filter(c => c.language === 'English').length;
+        document.getElementById('count-all').textContent = allChannels.length;
+        document.getElementById('count-es').textContent = countEs;
+        document.getElementById('count-en').textContent = countEn;
+        document.getElementById('channel-stats').textContent = `${allChannels.length} canales activos (${countEs} Español, ${countEn} English)`;
 
-        // Reproducir primer canal por defecto si existe
+        applyFilters();
+
+        // Reproducir el primer canal por defecto
         if (allChannels.length > 0) {
-          playChannel(allChannels[0], 0);
+          playChannel(allChannels[0]);
         }
       } catch (err) {
         console.error('Error al cargar la playlist:', err);
-        document.getElementById('channel-count').textContent = 'Error al cargar lista';
+        document.getElementById('channel-stats').textContent = 'Error al cargar lista';
       }
+    }
+
+    function applyFilters() {
+      filteredChannels = allChannels.filter(ch => {
+        const matchLang = (activeLanguage === 'all') || (ch.language.toLowerCase() === activeLanguage.toLowerCase());
+        const matchCat = (activeCategory === 'all') || (ch.category.toLowerCase().includes(activeCategory.toLowerCase()));
+        const query = searchQuery.toLowerCase();
+        const matchSearch = !query || ch.title.toLowerCase().includes(query) || ch.name.toLowerCase().includes(query) || ch.category.toLowerCase().includes(query);
+        return matchLang && matchCat && matchSearch;
+      });
+
+      displayedCount = PAGE_SIZE;
+      renderChannels();
     }
 
     function renderChannels() {
       const container = document.getElementById('channels-container');
       container.innerHTML = '';
 
-      const filtered = allChannels.filter(ch => {
-        const matchCategory = (activeCategory === 'all') || (ch.group.toLowerCase() === activeCategory.toLowerCase());
-        const matchSearch = ch.title.toLowerCase().includes(searchQuery.toLowerCase()) || ch.name.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchCategory && matchSearch;
-      });
+      document.getElementById('filtered-stats').textContent = `Mostrando ${Math.min(displayedCount, filteredChannels.length)} de ${filteredChannels.length} canales encontrados`;
 
-      if (filtered.length === 0) {
-        container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 2rem;">No se encontraron canales.</p>';
+      const visible = filteredChannels.slice(0, displayedCount);
+
+      if (visible.length === 0) {
+        container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 3rem;">No se encontraron canales con los filtros seleccionados.</p>';
+        document.getElementById('load-more-container').style.display = 'none';
         return;
       }
 
-      filtered.forEach((ch, idx) => {
+      visible.forEach((ch) => {
         const card = document.createElement('div');
         card.className = 'channel-card';
-        card.onclick = () => playChannel(ch, idx);
+        card.onclick = () => playChannel(ch, card);
 
+        const flag = ch.language === 'Español' ? '🇪🇸' : '🇬🇧';
         const logoSrc = ch.logo || 'https://via.placeholder.com/48/1e293b/38bdf8?text=TV';
+
         card.innerHTML = `
-          <img class="channel-logo" src="${logoSrc}" alt="${ch.name}" onerror="this.src='https://via.placeholder.com/48/1e293b/38bdf8?text=TV'">
+          <img class="channel-logo" src="${logoSrc}" alt="${ch.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/48/1e293b/38bdf8?text=TV'">
           <div class="channel-info">
             <div class="channel-name" title="${ch.title}">${ch.title || ch.name}</div>
-            <div class="channel-group">${ch.group}</div>
+            <div class="channel-meta">
+              <span class="pill-lang">${flag} ${ch.language}</span>
+              <span class="pill-cat">${ch.category}</span>
+            </div>
           </div>
         `;
         container.appendChild(card);
       });
+
+      if (displayedCount < filteredChannels.length) {
+        document.getElementById('load-more-container').style.display = 'flex';
+      } else {
+        document.getElementById('load-more-container').style.display = 'none';
+      }
     }
 
-    function playChannel(ch, index) {
-      document.getElementById('current-channel-title').textContent = `${ch.title || ch.name} (${ch.group})`;
-      document.getElementById('stream-status').textContent = 'Cargando stream...';
+    function loadMoreChannels() {
+      displayedCount += PAGE_SIZE;
+      renderChannels();
+    }
 
-      // Resaltar tarjeta activa
-      const cards = document.querySelectorAll('.channel-card');
-      cards.forEach((c, i) => {
-        if (i === index) c.classList.add('active');
-        else c.classList.remove('active');
-      });
+    function playChannel(ch, cardElement = null) {
+      document.getElementById('current-channel-title').textContent = `${ch.title || ch.name} (${ch.category})`;
+      document.getElementById('stream-status').textContent = 'Conectando a CDN...';
+
+      document.querySelectorAll('.channel-card').forEach(c => c.classList.remove('active'));
+      if (cardElement) cardElement.classList.add('active');
 
       if (Hls.isSupported()) {
         if (hls) {
@@ -594,11 +739,10 @@
         });
         hls.on(Hls.Events.ERROR, (event, data) => {
           if (data.fatal) {
-            document.getElementById('stream-status').textContent = 'Aviso: Stream con restricción de origen o geobloqueo';
+            document.getElementById('stream-status').textContent = 'Aviso: El reproductor del navegador no puede decodificar este codec (prueba en TiviMate o VLC)';
           }
         });
       } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        // Soporte nativo Safari
         video.src = ch.url;
         video.addEventListener('loadedmetadata', () => {
           video.play().catch(() => {});
@@ -607,16 +751,23 @@
       }
     }
 
-    function filterCategory(category, chipElement) {
-      activeCategory = category;
-      document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+    function setLanguageFilter(lang, chipElement) {
+      activeLanguage = lang;
+      document.querySelectorAll('#lang-chips .chip').forEach(c => c.classList.remove('active'));
       chipElement.classList.add('active');
-      renderChannels();
+      applyFilters();
+    }
+
+    function setCategoryFilter(cat, chipElement) {
+      activeCategory = cat;
+      document.querySelectorAll('#category-chips .chip').forEach(c => c.classList.remove('active'));
+      chipElement.classList.add('active');
+      applyFilters();
     }
 
     function handleSearch() {
       searchQuery = document.getElementById('search-box').value.trim();
-      renderChannels();
+      applyFilters();
     }
 
     loadChannels();

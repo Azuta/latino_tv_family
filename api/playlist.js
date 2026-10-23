@@ -15,10 +15,10 @@ export default function handler(req, res) {
     const filePath = path.join(process.cwd(), 'public', 'canales.m3u');
     const content = fs.readFileSync(filePath, 'utf-8');
 
-    const { pais, categoria, group, search, q, format } = req.query;
+    const { pais, categoria, category, group, search, q, idioma, lang, language, format } = req.query;
 
     // Si no hay filtros y no se pide JSON, devolver el archivo original rápidamente
-    if (!pais && !categoria && !group && !search && !q && format !== 'json') {
+    if (!pais && !categoria && !category && !group && !search && !q && !idioma && !lang && !language && format !== 'json') {
       res.setHeader('Content-Type', 'application/x-mpegURL; charset=utf-8');
       res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=600');
       return res.status(200).send(content);
@@ -44,14 +44,19 @@ export default function handler(req, res) {
         const nameMatch = currentExtinf.match(/tvg-name="([^"]*)"/i);
         const logoMatch = currentExtinf.match(/tvg-logo="([^"]*)"/i);
         const groupMatch = currentExtinf.match(/group-title="([^"]*)"/i);
+        const langMatch = currentExtinf.match(/tvg-language="([^"]*)"/i);
         const titleMatch = currentExtinf.match(/,(.*)$/);
+
+        const groupVal = groupMatch ? groupMatch[1] : 'General';
+        const langVal = langMatch ? langMatch[1] : (groupVal.startsWith('Español') ? 'Español' : (groupVal.startsWith('English') ? 'English' : 'Otro'));
 
         channels.push({
           rawExtinf: currentExtinf,
           id: idMatch ? idMatch[1] : '',
           name: nameMatch ? nameMatch[1] : '',
           logo: logoMatch ? logoMatch[1] : '',
-          group: groupMatch ? groupMatch[1] : 'General',
+          group: groupVal,
+          language: langVal,
           title: titleMatch ? titleMatch[1].trim() : '',
           url: line
         });
@@ -60,23 +65,39 @@ export default function handler(req, res) {
     }
 
     // Filtrar
-    const filterCat = (categoria || group || '').toLowerCase();
+    const filterCat = (categoria || category || group || '').toLowerCase();
     const filterSearch = (search || q || '').toLowerCase();
     const filterPais = (pais || '').toLowerCase();
+    const filterLang = (idioma || lang || language || '').toLowerCase();
 
     const filtered = channels.filter((ch) => {
       let matches = true;
+
+      if (filterLang) {
+        const l = ch.language.toLowerCase();
+        if (filterLang === 'es' || filterLang === 'español' || filterLang === 'spanish') {
+          matches = matches && (l.includes('español') || l.includes('spanish') || ch.group.toLowerCase().startsWith('español'));
+        } else if (filterLang === 'en' || filterLang === 'english' || filterLang === 'inglés' || filterLang === 'ingles') {
+          matches = matches && (l.includes('english') || ch.group.toLowerCase().startsWith('english'));
+        } else {
+          matches = matches && l.includes(filterLang);
+        }
+      }
+
       if (filterCat) {
         matches = matches && ch.group.toLowerCase().includes(filterCat);
       }
+
       if (filterSearch) {
         const text = `${ch.name} ${ch.title} ${ch.group} ${ch.id}`.toLowerCase();
         matches = matches && text.includes(filterSearch);
       }
+
       if (filterPais) {
         const text = `${ch.name} ${ch.title} ${ch.id}`.toLowerCase();
         matches = matches && (text.includes(`_${filterPais}`) || text.includes(`@${filterPais}`) || text.includes(filterPais));
       }
+
       return matches;
     });
 
